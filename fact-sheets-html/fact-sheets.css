@@ -36,7 +36,7 @@
 }
 
 .fc-logo-dot {
-    color: #d6006d;
+    color: #b7238a;
 }
 
 .fc-logo-tagline {
@@ -66,7 +66,7 @@
 }
 
 .fc-title {
-    color: #d6006d;
+    color: #b7238a;
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
@@ -74,7 +74,7 @@
 }
 
 .fc-subtitle {
-    color: #d6006d;
+    color: #b7238a;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 40px;
@@ -88,7 +88,7 @@
 
 .fc-row-label {
     flex: 0 0 190px;
-    color: #d6006d;
+    color: #b7238a;
     font-size: 16px;
     font-weight: 600;
 }
@@ -122,7 +122,7 @@
 
 .fc-list li::before {
     content: "▪";
-    color: #d6006d;
+    color: #b7238a;
     position: absolute;
     left: 0;
     top: 0;
@@ -152,7 +152,7 @@
 
 .fc-footer-label {
     flex: 0 0 120px;
-    color: #d6006d;
+    color: #b7238a;
     font-weight: 600;
 }
 

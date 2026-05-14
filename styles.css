@@ -12,9 +12,9 @@
 
     --line: #d9e2ec;
 
-    --primary: #aa0d71;
+    --primary: #b7238a;
 
-    --primary-dark: #0a2d49;
+    --primary-dark: #8f1c6d;
 
     --accent: #eeeaef00;
 
@@ -1114,6 +1114,62 @@ ul {
 
 
 
+.factsheet-back-button {
+
+    left: 1rem;
+
+    right: auto;
+
+    width: auto;
+
+    height: auto;
+
+    padding: 0.2rem 0.3rem;
+
+    font-size: 1.02rem;
+
+    font-weight: 700;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    color: var(--primary);
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.2rem;
+
+    z-index: 2;
+
+}
+
+
+
+.factsheet-back-button:hover,
+
+.factsheet-back-button:focus-visible {
+
+    background: transparent;
+
+    color: var(--primary);
+
+    text-decoration: underline;
+
+    outline: 2px solid color-mix(in srgb, var(--primary) 40%, white 60%);
+
+    outline-offset: 2px;
+
+}
+
+
+
 .modal-content {
 
     display: grid;
@@ -1440,6 +1496,84 @@ ul {
 
 
 
+.factsheet-language-toggle {
+
+    display: inline-flex;
+
+    gap: 0.35rem;
+
+    justify-self: end;
+
+    padding: 0.25rem;
+
+    border: 1px solid var(--line);
+
+    border-radius: 999px;
+
+    background: color-mix(in srgb, var(--surface) 86%, #ffffff 14%);
+
+}
+
+
+
+.factsheet-lang-btn {
+
+    border: none;
+
+    border-radius: 999px;
+
+    padding: 0.26rem 0.65rem;
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+
+    color: var(--muted);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+}
+
+
+
+.factsheet-lang-btn:hover,
+
+.factsheet-lang-btn:focus-visible {
+
+    color: var(--text);
+
+    background: color-mix(in srgb, var(--line) 42%, transparent 58%);
+
+    outline: none;
+
+}
+
+
+
+.factsheet-lang-btn.active {
+
+    color: var(--primary);
+
+    background: color-mix(in srgb, var(--primary) 14%, white 86%);
+
+}
+
+
+
+.factsheet-language-content {
+
+    width: 100%;
+
+}
+
+
+
 .consultants-grid {
 
     display: grid;
@@ -1454,39 +1588,395 @@ ul {
 
 .consultant-card {
 
-    padding: 1.4rem;
+    padding: 1.5rem;
 
     display: grid;
 
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 84px 1fr;
 
-    gap: 1.2rem;
+    gap: 1rem;
 
     align-items: start;
+
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+
+    cursor: pointer;
+
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 
 }
 
 
 
-.consultant {
+.consultant-card:hover,
 
-    padding: 1.4rem;
+.consultant-card:focus-visible {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(170, 13, 113, 0.24);
+
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.11);
+
+    outline: none;
+
+}
+
+
+
+.consultant-avatar {
+
+    width: 84px;
+
+    height: 84px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 16%, white 84%), #edf3f9);
+
+    color: var(--primary);
 
     display: grid;
 
-    grid-template-columns: 120px 1fr;
+    place-items: center;
 
-    gap: 1.2rem;
+    font-weight: 700;
 
-    align-items: start;
+    letter-spacing: 0.06em;
 
-    background: var(--transparent);
-
-    border: 0px solid var(--line);
-
-    border-radius: var(--radius);
+    border: 1px solid var(--line);
 
 
+
+}
+
+
+
+.consultant-content {
+
+    display: grid;
+
+    gap: 0.6rem;
+
+}
+
+
+
+.consultant-content h3 {
+
+    margin: 0;
+
+    font-size: 1.26rem;
+
+    line-height: 1.2;
+
+}
+
+
+
+.consultant-role {
+
+    margin: 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+
+.consultant-summary {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.55;
+
+}
+
+
+
+.meta-list {
+
+    margin: 0.25rem 0 0;
+
+    padding-left: 1rem;
+
+    color: var(--muted);
+
+}
+
+
+
+.meta-list li+li {
+
+    margin-top: 0.25rem;
+
+}
+
+
+
+.consultant-action {
+
+    margin-top: 0.3rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+
+
+.consultant-action::after {
+
+    content: "›";
+
+}
+
+
+
+.consultant-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    z-index: 2100;
+
+}
+
+
+
+.consultant-modal.open {
+
+    display: flex;
+
+}
+
+
+
+.consultant-modal-backdrop {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(2px);
+
+}
+
+
+
+.consultant-modal-panel {
+
+    position: relative;
+
+    width: min(720px, calc(100% - 2rem));
+
+    max-height: calc(100vh - 3rem);
+
+    overflow: auto;
+
+    background: var(--surface);
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    box-shadow: 0 32px 80px rgba(15, 23, 42, 0.2);
+
+    z-index: 1;
+
+    animation: slideInUp 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+}
+
+
+
+.consultant-modal-content {
+
+    display: grid;
+
+    gap: 1rem;
+
+}
+
+
+
+.consultant-modal-header {
+
+    display: grid;
+
+    gap: 0.35rem;
+
+}
+
+
+
+.consultant-modal-header h3 {
+
+    margin: 0;
+
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+
+    line-height: 1.2;
+
+}
+
+
+
+.consultant-modal-role {
+
+    margin: 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+
+.consultant-modal-lead {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.65;
+
+}
+
+
+
+.consultant-modal-columns {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+
+}
+
+
+
+.consultant-modal-block {
+
+    border: 1px solid var(--line);
+
+    border-radius: 14px;
+
+    padding: 0.95rem 1rem;
+
+    background: rgba(15, 23, 42, 0.02);
+
+}
+
+
+
+.consultant-modal-block h4 {
+
+    margin: 0 0 0.45rem;
+
+    font-size: 0.86rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--primary);
+
+}
+
+
+
+.consultant-modal-block p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.55;
+
+}
+
+
+
+.consultant-modal-expertise {
+
+    margin: 0;
+
+    padding-left: 1rem;
+
+    color: var(--muted);
+
+}
+
+
+
+.consultant-modal-expertise li+li {
+
+    margin-top: 0.3rem;
+
+}
+
+
+
+@media (max-width: 760px) {
+
+    .consultant-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .consultant-avatar {
+
+        width: 68px;
+
+        height: 68px;
+
+        border-radius: 16px;
+
+    }
+
+
+
+    .consultant-modal-panel {
+
+        padding: 1.4rem;
+
+    }
+
+
+
+    .consultant-modal-columns {
+
+        grid-template-columns: 1fr;
+
+    }
 
 }
 
@@ -1501,8 +1991,6 @@ ul {
     border-radius: 24px;
 
     background: linear-gradient(135deg, var(--accent), #eef4fa);
-
-    color: var(--primary);
 
     display: grid;
 

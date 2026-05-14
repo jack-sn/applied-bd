@@ -176,7 +176,101 @@ const uiText = {
 
     heroExplore: "Explore expertise",
 
+    heroCardTitle: "We turn expertise into progress.",
+
+    heroCardText:
+      "By combining strategic thinking, business insight, and people-focused consulting, we help organizations achieve the goals that matter most — with clarity, structure, and real momentum.",
+
     navTalk: "Talk to us",
+
+    missionText:
+      "We help companies advance with pragmatic transformation: business-focused thinking, people-centered execution, and a tight link between strategy, market opportunity, and operations—replacing vague promises with clear outcomes, structured programs, and measurable progress.",
+
+    expertiseKicker: "Our Expertise",
+
+    expertiseHeading: "Three strong service areas with room to scale.",
+
+    serviceAction: "See More!",
+
+    service3Title: "Leadership & HR Excellence",
+
+    expertiseTalkLink: "Let's Talk!",
+
+    consultantsKicker: "Consultants",
+
+    consultantsHeading:
+      "Experienced leadership partners for complex growth journeys.",
+
+    consultantsIntro:
+      "Our consultants combine executive experience and practical implementation expertise. Click a profile to see detailed background and focus areas.",
+
+    consultants: {
+      kurt: {
+        role: "Founder / Advisor",
+        summary:
+          "Executive advisor with deep experience in business transformation, leadership alignment and commercially driven growth programs.",
+        meta: [
+          "General management",
+          "Business transformation",
+          "Executive advisory",
+        ],
+      },
+      lina: {
+        role: "Advisor",
+        summary:
+          "International advisor focused on market development, IP strategy and sustainable growth initiatives across multiple regions.",
+        meta: ["Business development", "IP strategy", "Green energy markets"],
+      },
+      action: "View profile",
+      aria: {
+        kurt: "Open profile for Kurt Schraudy",
+        lina: "Open profile for Lina Chan",
+      },
+      modal: {
+        kicker: "Consultant Profile",
+        experience: "Experience",
+        highlights: "Highlights",
+        focusAreas: "Focus Areas",
+      },
+    },
+
+    contactKicker: "Contact",
+
+    detailMailLabel: "Mail",
+
+    detailLocationLabel: "Location",
+
+    detailLocationValue: "Munich / Remote / International",
+
+    formNameLabel: "Name",
+
+    formNamePlaceholder: "Your name",
+
+    formEmailLabel: "E-Mail",
+
+    formEmailPlaceholder: "your@email.com",
+
+    formSubjectLabel: "Subject",
+
+    formSubjectPlaceholder: "How can we help?",
+
+    formMessageLabel: "Message",
+
+    formMessagePlaceholder: "Write your message here...",
+
+    footerCopy: "© 2026 Applied Business Development",
+
+    footerImprint: "Imprint",
+
+    footerPrivacy: "Privacy",
+
+    footerTop: "Back to top",
+
+    closeLabels: {
+      expertise: "Close details",
+      factsheet: "Back",
+      consultant: "Close consultant profile",
+    },
 
     sectionIntro:
       "We turn practical expertise into business outcomes by matching leadership, market development and HR programs with measurable progress.",
@@ -186,6 +280,10 @@ const uiText = {
     factSheetHeading: "See more about my work",
 
     modalNote: "",
+
+    factsheetLoadError: "Error loading fact sheet. Please try again.",
+
+    factsheetLanguageToggleAria: "Fact sheet language",
 
     contactHeading: "Let’s get in touch!",
 
@@ -225,7 +323,101 @@ const uiText = {
 
     heroExplore: "Expertise entdecken",
 
+    heroCardTitle: "Wir verwandeln Expertise in Fortschritt.",
+
+    heroCardText:
+      "Durch die Verbindung von strategischem Denken, Business-Know-how und menschenzentrierter Beratung helfen wir Organisationen, ihre wichtigsten Ziele mit Klarheit, Struktur und echter Dynamik zu erreichen.",
+
     navTalk: "Kontakt",
+
+    missionText:
+      "Wir unterstützen Unternehmen mit pragmatischer Transformation: businessorientiertes Denken, menschenzentrierte Umsetzung und eine enge Verbindung von Strategie, Marktchancen und operativer Umsetzung — statt vager Versprechen liefern wir klare Ergebnisse, strukturierte Programme und messbaren Fortschritt.",
+
+    expertiseKicker: "Unsere Expertise",
+
+    expertiseHeading: "Drei starke Leistungsbereiche mit Raum zum Skalieren.",
+
+    serviceAction: "Mehr erfahren",
+
+    service3Title: "Leadership & HR Excellence",
+
+    expertiseTalkLink: "Lassen Sie uns sprechen!",
+
+    consultantsKicker: "Berater",
+
+    consultantsHeading:
+      "Erfahrene Sparringspartner für anspruchsvolle Wachstumsphasen.",
+
+    consultantsIntro:
+      "Unsere Berater verbinden Executive-Erfahrung mit pragmatischer Umsetzungskompetenz. Klicken Sie auf ein Profil für detaillierte Hintergründe und Schwerpunkte.",
+
+    consultants: {
+      kurt: {
+        role: "Gründer / Berater",
+        summary:
+          "Executive Advisor mit tiefgreifender Erfahrung in Business Transformation, Führungsausrichtung und kommerziell getriebenen Wachstumsprogrammen.",
+        meta: [
+          "General Management",
+          "Business Transformation",
+          "Executive Advisory",
+        ],
+      },
+      lina: {
+        role: "Beraterin",
+        summary:
+          "Internationale Beraterin mit Fokus auf Marktentwicklung, IP-Strategie und nachhaltige Wachstumsinitiativen in verschiedenen Regionen.",
+        meta: ["Business Development", "IP-Strategie", "Green-Energy-Märkte"],
+      },
+      action: "Profil ansehen",
+      aria: {
+        kurt: "Profil von Kurt Schraudy öffnen",
+        lina: "Profil von Lina Chan öffnen",
+      },
+      modal: {
+        kicker: "Beraterprofil",
+        experience: "Erfahrung",
+        highlights: "Highlights",
+        focusAreas: "Schwerpunkte",
+      },
+    },
+
+    contactKicker: "Kontakt",
+
+    detailMailLabel: "E-Mail",
+
+    detailLocationLabel: "Standort",
+
+    detailLocationValue: "München / Remote / International",
+
+    formNameLabel: "Name",
+
+    formNamePlaceholder: "Ihr Name",
+
+    formEmailLabel: "E-Mail",
+
+    formEmailPlaceholder: "ihre@email.de",
+
+    formSubjectLabel: "Betreff",
+
+    formSubjectPlaceholder: "Wobei können wir unterstützen?",
+
+    formMessageLabel: "Nachricht",
+
+    formMessagePlaceholder: "Schreiben Sie hier Ihre Nachricht...",
+
+    footerCopy: "© 2026 Applied Business Development",
+
+    footerImprint: "Impressum",
+
+    footerPrivacy: "Datenschutz",
+
+    footerTop: "Nach oben",
+
+    closeLabels: {
+      expertise: "Details schließen",
+      factsheet: "Zurück",
+      consultant: "Beraterprofil schließen",
+    },
 
     sectionIntro:
       "Wir setzen Erfahrung in messbare Ergebnisse um, indem wir Führung, Marktentwicklung und HR-Programme auf klare Ziele ausrichten.",
@@ -235,6 +427,11 @@ const uiText = {
     factSheetHeading: "Mehr zu meiner Arbeit",
 
     modalNote: "",
+
+    factsheetLoadError:
+      "Fehler beim Laden des Fact Sheets. Bitte versuchen Sie es erneut.",
+
+    factsheetLanguageToggleAria: "Fact-Sheet-Sprache",
 
     contactHeading: "Lassen Sie uns ins Gespräch kommen!",
 
@@ -259,6 +456,157 @@ const uiText = {
 
 const state = {
   lang: "en",
+  activeFactsheetProject: null,
+};
+
+const availableFactsheetFiles = new Set([
+  "fact-sheets-html/hr-factsheet-en.html",
+  "fact-sheets-html/fact-sheet-hr-factsheet-en.html",
+  "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
+  "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
+  "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
+  "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-sales-potential-analysis-en.html",
+  "fact-sheets-html/fact-sheet-vertriebspotential-analyse-de.html",
+  "fact-sheets-html/fact-sheet-applied-bd-increasing-customer-impact-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-eigene-wirkung-auf-kunden-steigern-de.html",
+  "fact-sheets-html/fact-sheet-applied-bd-efficiency-and-strength-in-closing-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
+  "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
+  "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
+  "fact-sheets-html/fact-sheet-applied-bd-businness-matching-at-tradeshows-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-en.html",
+]);
+
+const factsheetTranslationPairs = [
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
+    de: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-efficiency-and-strength-in-closing-en.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-sales-potential-analysis-en.html",
+    de: "fact-sheets-html/fact-sheet-vertriebspotential-analyse-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-increasing-customer-impact-en.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-eigene-wirkung-auf-kunden-steigern-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
+    de: "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
+  },
+];
+
+const factsheetTranslationByFile = factsheetTranslationPairs.reduce(
+  (acc, pair) => {
+    acc[pair.en] = pair.de;
+    acc[pair.de] = pair.en;
+    return acc;
+  },
+  {},
+);
+
+function resolveFactsheetPath(preferredFile, fallbackFile) {
+  if (preferredFile && availableFactsheetFiles.has(preferredFile)) {
+    return preferredFile;
+  }
+
+  if (fallbackFile && availableFactsheetFiles.has(fallbackFile)) {
+    return fallbackFile;
+  }
+
+  return preferredFile || fallbackFile || "";
+}
+
+function getFactsheetTitleByFile(filePath, lang) {
+  if (!filePath) {
+    return "";
+  }
+
+  const languageProjects = Object.values(expertiseData).flatMap(
+    (expertise) => expertise.projects[lang] || [],
+  );
+  const match = languageProjects.find((project) => project.file === filePath);
+  return match?.title || "";
+}
+
+const consultantProfiles = {
+  kurt: {
+    name: "Kurt Schraudy",
+    role: {
+      en: "Founder / Advisor",
+      de: "Gründer / Berater",
+    },
+    lead: {
+      en: "Senior executive advisor with a strong track record in transformation, leadership alignment and commercially focused change programs.",
+      de: "Senior Executive Advisor mit starker Erfolgsbilanz in Transformation, Führungsausrichtung und kommerziell fokussierten Veränderungsprogrammen.",
+    },
+    experience: {
+      en: "35+ years across high-tech, semiconductor and exhibition industries; 15+ years in general management roles with full P&L responsibility.",
+      de: "Über 35 Jahre Erfahrung in High-Tech-, Halbleiter- und Messebranchen; über 15 Jahre in General-Management-Rollen mit voller P&L-Verantwortung.",
+    },
+    highlights: {
+      en: "17 years on supervisory boards and 11 years as HR Business Partner in electronics and semiconductor environments.",
+      de: "17 Jahre in Aufsichtsgremien und 11 Jahre als HR Business Partner im Elektronik- und Halbleiterumfeld.",
+    },
+    expertise: {
+      en: [
+        "General management",
+        "Business transformation",
+        "Sales leadership",
+        "Executive advisory",
+      ],
+      de: [
+        "General Management",
+        "Business Transformation",
+        "Sales Leadership",
+        "Executive Advisory",
+      ],
+    },
+  },
+  lina: {
+    name: "Lina Chan",
+    role: {
+      en: "Advisor",
+      de: "Beraterin",
+    },
+    lead: {
+      en: "International advisor focused on strategic market development, IP positioning and sustainable growth initiatives.",
+      de: "Internationale Beraterin mit Fokus auf strategische Marktentwicklung, IP-Positionierung und nachhaltige Wachstumsinitiativen.",
+    },
+    experience: {
+      en: "26 years in marketing, IP management and green energy with projects across Hong Kong, Canada and Europe.",
+      de: "26 Jahre Erfahrung in Marketing, IP-Management und Green Energy mit Projekten in Hongkong, Kanada und Europa.",
+    },
+    highlights: {
+      en: "Combines cross-cultural commercial execution with practical implementation support for growth-oriented organizations.",
+      de: "Verbindet interkulturelle kommerzielle Umsetzung mit praxisnaher Implementierungsunterstützung für wachstumsorientierte Organisationen.",
+    },
+    expertise: {
+      en: [
+        "Business development",
+        "IP strategy",
+        "Green energy markets",
+        "International market entry",
+      ],
+      de: [
+        "Business Development",
+        "IP-Strategie",
+        "Green-Energy-Märkte",
+        "Internationaler Markteintritt",
+      ],
+    },
+  },
 };
 
 const elements = {
@@ -280,6 +628,14 @@ const elements = {
 
   factsheetContent: document.getElementById("factsheet-modal-content"),
 
+  consultantCards: document.querySelectorAll(
+    ".consultant-card[data-consultant]",
+  ),
+
+  consultantModal: document.getElementById("consultant-modal"),
+
+  consultantModalContent: document.getElementById("consultant-modal-content"),
+
   langButtons: document.querySelectorAll(".lang-switch"),
 
   cards: document.querySelectorAll(".service-card[data-expertise]"),
@@ -300,20 +656,121 @@ const elements = {
 
   heroHeading: document.getElementById("hero-heading"),
 
+  heroCardTitle: document.getElementById("hero-card-title"),
+
+  heroCardText: document.getElementById("hero-card-text"),
+
   heroPoints: document.querySelectorAll("#hero-points li"),
 
   heroTalk: document.getElementById("hero-talk"),
 
   heroExplore: document.getElementById("hero-explore"),
 
+  missionText: document.getElementById("mission-text"),
+
+  expertiseKicker: document.getElementById("expertise-kicker"),
+
+  expertiseHeading: document.getElementById("expertise-heading"),
+
+  service1Title: document.getElementById("service-1-title"),
+
+  service1Text: document.getElementById("service-1-text"),
+
+  service1Action: document.getElementById("service-1-action"),
+
+  service2Title: document.getElementById("service-2-title"),
+
+  service2Text: document.getElementById("service-2-text"),
+
+  service2Action: document.getElementById("service-2-action"),
+
+  service3Title: document.getElementById("service-3-title"),
+
+  service3Text: document.getElementById("service-3-text"),
+
+  service3Action: document.getElementById("service-3-action"),
+
+  expertiseTalkLink: document.getElementById("expertise-talk-link"),
+
+  consultantsKicker: document.getElementById("consultants-kicker"),
+
+  consultantsHeading: document.getElementById("consultants-heading"),
+
+  consultantsIntro: document.getElementById("consultants-intro"),
+
+  consultantKurtRole: document.getElementById("consultant-kurt-role"),
+
+  consultantKurtSummary: document.getElementById("consultant-kurt-summary"),
+
+  consultantKurtMeta1: document.getElementById("consultant-kurt-meta-1"),
+
+  consultantKurtMeta2: document.getElementById("consultant-kurt-meta-2"),
+
+  consultantKurtMeta3: document.getElementById("consultant-kurt-meta-3"),
+
+  consultantKurtAction: document.getElementById("consultant-kurt-action"),
+
+  consultantLinaRole: document.getElementById("consultant-lina-role"),
+
+  consultantLinaSummary: document.getElementById("consultant-lina-summary"),
+
+  consultantLinaMeta1: document.getElementById("consultant-lina-meta-1"),
+
+  consultantLinaMeta2: document.getElementById("consultant-lina-meta-2"),
+
+  consultantLinaMeta3: document.getElementById("consultant-lina-meta-3"),
+
+  consultantLinaAction: document.getElementById("consultant-lina-action"),
+
   sectionIntro: document.getElementById("expertise-intro"),
+
+  contactKicker: document.getElementById("contact-kicker"),
+
+  detailMailLabel: document.getElementById("detail-mail-label"),
+
+  detailLocationLabel: document.getElementById("detail-location-label"),
+
+  detailLocationValue: document.getElementById("detail-location-value"),
+
+  formNameLabel: document.getElementById("form-name-label"),
+
+  formEmailLabel: document.getElementById("form-email-label"),
+
+  formSubjectLabel: document.getElementById("form-subject-label"),
+
+  formMessageLabel: document.getElementById("form-message-label"),
+
+  formNameInput: document.getElementById("name"),
+
+  formEmailInput: document.getElementById("email"),
+
+  formSubjectInput: document.getElementById("subject"),
+
+  formMessageInput: document.getElementById("message"),
 
   contactHeading: document.getElementById("contact-heading"),
 
   contactText: document.getElementById("contact-text"),
 
   contactSubmit: document.getElementById("contact-submit"),
+
+  footerCopy: document.getElementById("footer-copy"),
+
+  footerImprint: document.getElementById("footer-imprint"),
+
+  footerPrivacy: document.getElementById("footer-privacy"),
+
+  footerTop: document.getElementById("footer-top"),
 };
+
+function syncBodyOverflow() {
+  const isAnyModalOpen =
+    elements.modal.classList.contains("open") ||
+    elements.factsheetModal.classList.contains("open") ||
+    elements.consultantModal.classList.contains("open");
+
+  document.body.style.overflow = isAnyModalOpen ? "hidden" : "";
+}
 
 function renderModal(expertiseKey) {
   const expertise = expertiseData[expertiseKey];
@@ -329,7 +786,31 @@ function renderModal(expertiseKey) {
   const description =
     expertise.description[language] || expertise.description.en;
 
-  const projects = expertise.projects[language] || expertise.projects.en;
+  const localizedProjects =
+    expertise.projects[language] || expertise.projects.en || [];
+  const oppositeLang = language === "de" ? "en" : "de";
+
+  const projects = localizedProjects.map((project) => {
+    const currentFile = resolveFactsheetPath(project.file, "");
+    const translatedFile = resolveFactsheetPath(
+      factsheetTranslationByFile[currentFile],
+      "",
+    );
+    const oppositeTitle =
+      getFactsheetTitleByFile(translatedFile, oppositeLang) || project.title;
+
+    return {
+      displayTitle: project.title,
+      titles: {
+        [language]: project.title,
+        [oppositeLang]: oppositeTitle,
+      },
+      files: {
+        [language]: currentFile,
+        [oppositeLang]: translatedFile || currentFile,
+      },
+    };
+  });
 
   elements.modalTitle.textContent = title;
 
@@ -343,8 +824,8 @@ function renderModal(expertiseKey) {
 
   elements.modalProjects.innerHTML = projects
 
-    .map((project) => {
-      return `<li><button class="factsheet-link" data-file="${project.file}" data-title="${project.title.replace(/"/g, "&quot;")}">${project.title}</button></li>`;
+    .map((project, index) => {
+      return `<li><button class="factsheet-link" data-index="${index}">${project.displayTitle}</button></li>`;
     })
 
     .join("");
@@ -353,7 +834,12 @@ function renderModal(expertiseKey) {
 
   document.querySelectorAll(".factsheet-link").forEach((button) => {
     button.addEventListener("click", () => {
-      openFactsheet(button.dataset.file, button.dataset.title);
+      const projectIndex = Number(button.dataset.index);
+      const selectedProject = projects[projectIndex];
+      if (!selectedProject) {
+        return;
+      }
+      openFactsheet(selectedProject, language);
     });
   });
 
@@ -361,10 +847,23 @@ function renderModal(expertiseKey) {
 
   elements.modal.setAttribute("aria-hidden", "false");
 
-  document.body.style.overflow = "hidden";
+  syncBodyOverflow();
 }
 
-function openFactsheet(filePath, title) {
+function openFactsheet(project, preferredLang = state.lang) {
+  const requestedLang = preferredLang === "de" ? "de" : "en";
+  const filePath =
+    project.files[requestedLang] || project.files.en || project.files.de;
+
+  if (!filePath) {
+    return;
+  }
+
+  state.activeFactsheetProject = {
+    ...project,
+    preferredLang: requestedLang,
+  };
+
   fetch(filePath)
     .then((response) => {
       if (!response.ok) throw new Error(`Failed to load ${filePath}`);
@@ -373,26 +872,47 @@ function openFactsheet(filePath, title) {
     })
 
     .then((html) => {
-      elements.factsheetContent.innerHTML = html;
+      elements.factsheetContent.innerHTML = `
+        <div class="factsheet-language-toggle" role="group" aria-label="${uiText[state.lang].factsheetLanguageToggleAria}">
+          <button type="button" class="factsheet-lang-btn ${requestedLang === "en" ? "active" : ""}" data-factsheet-lang="en">EN</button>
+          <button type="button" class="factsheet-lang-btn ${requestedLang === "de" ? "active" : ""}" data-factsheet-lang="de">DE</button>
+        </div>
+        <div class="factsheet-language-content">${html}</div>
+      `;
+
+      elements.factsheetContent
+        .querySelectorAll("[data-factsheet-lang]")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const nextLang = button.dataset.factsheetLang;
+            if (!state.activeFactsheetProject || !nextLang) {
+              return;
+            }
+            openFactsheet(state.activeFactsheetProject, nextLang);
+          });
+        });
 
       elements.factsheetModal.classList.add("open", "split-layout");
 
       elements.factsheetModal.setAttribute("aria-hidden", "false");
 
       elements.modal.classList.add("split-layout");
+
+      syncBodyOverflow();
     })
 
     .catch((error) => {
       console.error("Error loading factsheet:", error);
 
-      elements.factsheetContent.innerHTML =
-        "<p>Error loading fact sheet. Please try again.</p>";
+      elements.factsheetContent.innerHTML = `<p>${uiText[state.lang].factsheetLoadError}</p>`;
 
       elements.factsheetModal.classList.add("open", "split-layout");
 
       elements.factsheetModal.setAttribute("aria-hidden", "false");
 
       elements.modal.classList.add("split-layout");
+
+      syncBodyOverflow();
     });
 }
 
@@ -404,10 +924,13 @@ function closeFactsheet() {
   elements.factsheetModal.setAttribute("aria-hidden", "true");
 
   elements.factsheetContent.innerHTML = "";
+  state.activeFactsheetProject = null;
 
   // Remove split-layout from expertise modal when factsheet is closed
 
   elements.modal.classList.remove("split-layout");
+
+  syncBodyOverflow();
 }
 
 function closeModal() {
@@ -421,7 +944,65 @@ function closeModal() {
 
   elements.modal.setAttribute("aria-hidden", "true");
 
-  document.body.style.overflow = "";
+  syncBodyOverflow();
+}
+
+function openConsultantModal(consultantKey) {
+  const consultant = consultantProfiles[consultantKey];
+  const language = state.lang;
+  const labels = uiText[language].consultants.modal;
+
+  if (
+    !consultant ||
+    !elements.consultantModal ||
+    !elements.consultantModalContent
+  ) {
+    return;
+  }
+
+  elements.consultantModalContent.innerHTML = `
+    <div class="consultant-modal-header">
+      <p class="section-kicker modal-kicker">${labels.kicker}</p>
+      <h3 id="consultant-modal-title">${consultant.name}</h3>
+      <p class="consultant-modal-role">${consultant.role[language]}</p>
+    </div>
+    <p class="consultant-modal-lead">${consultant.lead[language]}</p>
+    <div class="consultant-modal-columns">
+      <div class="consultant-modal-block">
+        <h4>${labels.experience}</h4>
+        <p>${consultant.experience[language]}</p>
+      </div>
+      <div class="consultant-modal-block">
+        <h4>${labels.highlights}</h4>
+        <p>${consultant.highlights[language]}</p>
+      </div>
+    </div>
+    <div class="consultant-modal-block">
+      <h4>${labels.focusAreas}</h4>
+      <ul class="consultant-modal-expertise">
+        ${consultant.expertise[language]
+          .map((item) => `<li>${item}</li>`)
+          .join("")}
+      </ul>
+    </div>
+  `;
+
+  elements.consultantModal.classList.add("open");
+  elements.consultantModal.dataset.consultant = consultantKey;
+  elements.consultantModal.setAttribute("aria-hidden", "false");
+  syncBodyOverflow();
+}
+
+function closeConsultantModal() {
+  if (!elements.consultantModal || !elements.consultantModalContent) {
+    return;
+  }
+
+  elements.consultantModal.classList.remove("open");
+  delete elements.consultantModal.dataset.consultant;
+  elements.consultantModal.setAttribute("aria-hidden", "true");
+  elements.consultantModalContent.innerHTML = "";
+  syncBodyOverflow();
 }
 
 function setLanguage(lang) {
@@ -439,6 +1020,181 @@ function setLanguage(lang) {
 
   if (elements.heroHeading) {
     elements.heroHeading.textContent = uiText[lang].heroHeading;
+  }
+
+  if (
+    state.activeFactsheetProject &&
+    elements.factsheetModal.classList.contains("open")
+  ) {
+    openFactsheet(state.activeFactsheetProject, lang);
+  }
+
+  if (elements.heroCardTitle)
+    elements.heroCardTitle.textContent = uiText[lang].heroCardTitle;
+
+  if (elements.heroCardText)
+    elements.heroCardText.textContent = uiText[lang].heroCardText;
+
+  if (elements.missionText)
+    elements.missionText.textContent = uiText[lang].missionText;
+
+  if (elements.expertiseKicker)
+    elements.expertiseKicker.textContent = uiText[lang].expertiseKicker;
+
+  if (elements.expertiseHeading)
+    elements.expertiseHeading.textContent = uiText[lang].expertiseHeading;
+
+  if (elements.service1Title)
+    elements.service1Title.textContent =
+      expertiseData["business-transformation"].title[lang];
+
+  if (elements.service1Text)
+    elements.service1Text.textContent =
+      expertiseData["business-transformation"].description[lang];
+
+  if (elements.service2Title)
+    elements.service2Title.textContent =
+      expertiseData["growth-market-development"].title[lang];
+
+  if (elements.service2Text)
+    elements.service2Text.textContent =
+      expertiseData["growth-market-development"].description[lang];
+
+  if (elements.service3Title)
+    elements.service3Title.textContent = uiText[lang].service3Title;
+
+  if (elements.service3Text)
+    elements.service3Text.textContent =
+      expertiseData["hr-excellence"].description[lang];
+
+  if (elements.service1Action)
+    elements.service1Action.textContent = uiText[lang].serviceAction;
+  if (elements.service2Action)
+    elements.service2Action.textContent = uiText[lang].serviceAction;
+  if (elements.service3Action)
+    elements.service3Action.textContent = uiText[lang].serviceAction;
+
+  if (elements.expertiseTalkLink)
+    elements.expertiseTalkLink.textContent = uiText[lang].expertiseTalkLink;
+
+  if (elements.consultantsKicker)
+    elements.consultantsKicker.textContent = uiText[lang].consultantsKicker;
+
+  if (elements.consultantsHeading)
+    elements.consultantsHeading.textContent = uiText[lang].consultantsHeading;
+
+  if (elements.consultantsIntro)
+    elements.consultantsIntro.textContent = uiText[lang].consultantsIntro;
+
+  if (elements.consultantKurtRole)
+    elements.consultantKurtRole.textContent =
+      uiText[lang].consultants.kurt.role;
+  if (elements.consultantKurtSummary)
+    elements.consultantKurtSummary.textContent =
+      uiText[lang].consultants.kurt.summary;
+  if (elements.consultantKurtMeta1)
+    elements.consultantKurtMeta1.textContent =
+      uiText[lang].consultants.kurt.meta[0];
+  if (elements.consultantKurtMeta2)
+    elements.consultantKurtMeta2.textContent =
+      uiText[lang].consultants.kurt.meta[1];
+  if (elements.consultantKurtMeta3)
+    elements.consultantKurtMeta3.textContent =
+      uiText[lang].consultants.kurt.meta[2];
+  if (elements.consultantKurtAction)
+    elements.consultantKurtAction.textContent = uiText[lang].consultants.action;
+
+  if (elements.consultantLinaRole)
+    elements.consultantLinaRole.textContent =
+      uiText[lang].consultants.lina.role;
+  if (elements.consultantLinaSummary)
+    elements.consultantLinaSummary.textContent =
+      uiText[lang].consultants.lina.summary;
+  if (elements.consultantLinaMeta1)
+    elements.consultantLinaMeta1.textContent =
+      uiText[lang].consultants.lina.meta[0];
+  if (elements.consultantLinaMeta2)
+    elements.consultantLinaMeta2.textContent =
+      uiText[lang].consultants.lina.meta[1];
+  if (elements.consultantLinaMeta3)
+    elements.consultantLinaMeta3.textContent =
+      uiText[lang].consultants.lina.meta[2];
+  if (elements.consultantLinaAction)
+    elements.consultantLinaAction.textContent = uiText[lang].consultants.action;
+
+  elements.consultantCards.forEach((card) => {
+    const consultantKey = card.dataset.consultant;
+    if (consultantKey && uiText[lang].consultants.aria[consultantKey]) {
+      card.setAttribute(
+        "aria-label",
+        uiText[lang].consultants.aria[consultantKey],
+      );
+    }
+  });
+
+  if (elements.contactKicker)
+    elements.contactKicker.textContent = uiText[lang].contactKicker;
+
+  if (elements.detailMailLabel)
+    elements.detailMailLabel.textContent = uiText[lang].detailMailLabel;
+  if (elements.detailLocationLabel)
+    elements.detailLocationLabel.textContent = uiText[lang].detailLocationLabel;
+  if (elements.detailLocationValue)
+    elements.detailLocationValue.textContent = uiText[lang].detailLocationValue;
+
+  if (elements.formNameLabel)
+    elements.formNameLabel.textContent = uiText[lang].formNameLabel;
+  if (elements.formEmailLabel)
+    elements.formEmailLabel.textContent = uiText[lang].formEmailLabel;
+  if (elements.formSubjectLabel)
+    elements.formSubjectLabel.textContent = uiText[lang].formSubjectLabel;
+  if (elements.formMessageLabel)
+    elements.formMessageLabel.textContent = uiText[lang].formMessageLabel;
+
+  if (elements.formNameInput)
+    elements.formNameInput.placeholder = uiText[lang].formNamePlaceholder;
+  if (elements.formEmailInput)
+    elements.formEmailInput.placeholder = uiText[lang].formEmailPlaceholder;
+  if (elements.formSubjectInput)
+    elements.formSubjectInput.placeholder = uiText[lang].formSubjectPlaceholder;
+  if (elements.formMessageInput)
+    elements.formMessageInput.placeholder = uiText[lang].formMessagePlaceholder;
+
+  if (elements.footerCopy)
+    elements.footerCopy.textContent = uiText[lang].footerCopy;
+  if (elements.footerImprint)
+    elements.footerImprint.textContent = uiText[lang].footerImprint;
+  if (elements.footerPrivacy)
+    elements.footerPrivacy.textContent = uiText[lang].footerPrivacy;
+  if (elements.footerTop)
+    elements.footerTop.textContent = uiText[lang].footerTop;
+
+  const expertiseClose = elements.modal?.querySelector(".modal-close");
+  const factsheetClose = elements.factsheetModal?.querySelector(".modal-close");
+  const consultantClose =
+    elements.consultantModal?.querySelector(".modal-close");
+
+  if (expertiseClose)
+    expertiseClose.setAttribute(
+      "aria-label",
+      uiText[lang].closeLabels.expertise,
+    );
+  if (factsheetClose)
+    factsheetClose.setAttribute(
+      "aria-label",
+      uiText[lang].closeLabels.factsheet,
+    );
+  if (consultantClose)
+    consultantClose.setAttribute(
+      "aria-label",
+      uiText[lang].closeLabels.consultant,
+    );
+
+  if (elements.consultantModal.classList.contains("open")) {
+    const openKey = elements.consultantModal.dataset.consultant;
+    if (openKey) {
+      openConsultantModal(openKey);
+    }
   }
 
   if (elements.heroPoints.length) {
@@ -503,6 +1259,19 @@ function installEventHandlers() {
     });
   });
 
+  elements.consultantCards.forEach((card) => {
+    const consultantKey = card.dataset.consultant;
+
+    card.addEventListener("click", () => openConsultantModal(consultantKey));
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openConsultantModal(consultantKey);
+      }
+    });
+  });
+
   elements.modal.addEventListener("click", (event) => {
     if (
       event.target.dataset.close === "modal" ||
@@ -522,9 +1291,23 @@ function installEventHandlers() {
     }
   });
 
+  if (elements.consultantModal) {
+    elements.consultantModal.addEventListener("click", (event) => {
+      if (
+        event.target === elements.consultantModal ||
+        event.target.dataset.close === "consultant" ||
+        event.target.classList.contains("modal-close")
+      ) {
+        closeConsultantModal();
+      }
+    });
+  }
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      if (elements.factsheetModal.classList.contains("open")) {
+      if (elements.consultantModal.classList.contains("open")) {
+        closeConsultantModal();
+      } else if (elements.factsheetModal.classList.contains("open")) {
         closeFactsheet();
       } else if (elements.modal.classList.contains("open")) {
         closeModal();
