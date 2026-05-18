@@ -46,7 +46,8 @@
 }
 
 .fc-logo-img {
-    width: 200px;
+    width: 150px;
+    max-width: 100%;
     height: auto;
 }
 
