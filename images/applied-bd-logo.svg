@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1540.64 445.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c40a7e;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: #427293;
+        font-family: FedraSans-Normal, 'Fedra Sans Normal';
+        font-size: 244px;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        fill: #636362;
+        font-family: MetaPro-Light, 'Meta Pro';
+        font-size: 125.27px;
+        font-weight: 300;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M1146.65,160.49c22.42-4.18,40.51,13.28,33.56,35.56-9.28,29.74-57.38,22.07-53.19-13.19,1.11-9.33,10.25-20.62,19.63-22.37Z"/>
+      <text class="cls-3" transform="translate(0 208.25)"><tspan x="0" y="0">Sch</tspan><tspan class="cls-10" x="424.8" y="0">r</tspan><tspan x="525.08" y="0">audy</tspan></text>
+      <text class="cls-9" transform="translate(0 411.12)"><tspan x="0" y="0">a</tspan><tspan class="cls-7" x="61.76" y="0">pp</tspan><tspan class="cls-4" x="193.54" y="0">lie</tspan><tspan class="cls-6" x="312.66" y="0">d</tspan><tspan class="cls-4" x="378.18" y="0"> </tspan><tspan class="cls-2" x="406.74" y="0">bus</tspan><tspan class="cls-8" x="590.5" y="0">in</tspan><tspan class="cls-7" x="684.2" y="0">es</tspan><tspan class="cls-5" x="797.94" y="0">s</tspan><tspan x="850.81" y="0"> </tspan><tspan class="cls-7" x="879.37" y="0">d</tspan><tspan x="945.51" y="0">evelopmen</tspan><tspan class="cls-5" x="1505.44" y="0">t</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -112,6 +112,20 @@
         font-size: 0.95rem;
       }
 
+      .legal-links {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .legal-links a {
+        color: #d5ebff;
+        text-underline-offset: 3px;
+        font-size: 0.95rem;
+      }
+
       .dot {
         width: 10px;
         height: 10px;
@@ -152,7 +166,11 @@
 
   <body>
     <main class="card" role="main" aria-live="polite">
-      <img src="images/schraudy-logo.svg" alt="Schraudy logo" class="logo" />
+      <img
+        src="images/applied-bd-logo.svg"
+        alt="Applied BD logo"
+        class="logo"
+      />
       <h1>Website Under Construction</h1>
       <p>
         We are currently updating this website to provide you with an improved
@@ -162,6 +180,10 @@
         <span class="dot"></span>
         <span>We'll be back soon!</span>
       </div>
+      <nav class="legal-links" aria-label="Legal links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
     </main>
   </body>
 </html>

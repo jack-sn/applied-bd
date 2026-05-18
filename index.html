@@ -14,11 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />  
+    <link rel="stylesheet" href="styles.css" />
     <script>
-      if (!window.location.search.includes("preview=1")) {
-        window.location.replace("under-construction.html");
-      }
+      (function redirectToConstruction() {
+        const params = new URLSearchParams(window.location.search);
+        const isPreviewMode = params.get("preview") === "1";
+
+        if (!isPreviewMode) {
+          window.location.replace("under-construction.html");
+        }
+      })();
     </script>
   </head>
 
@@ -26,10 +31,15 @@
     <header class="site-header">
       <div class="container nav-row">
         <a href="#top" class="logo">
-          <img src="images/schraudy-logo.svg" alt="Schraudy logo" class="logo-img" width="200" height="55" />
+          <img
+            src="images/applied-bd-logo.svg"
+            alt="Applied BD logo"
+            class="logo-img"
+            width="200"
+            height="55"
+          />
         </a>
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="#mission" id="nav-mission">Mission</a>
           <a href="#expertise" id="nav-expertise">Expertise</a>
           <a href="#consultants" id="nav-consultants">Consultants</a>
           <a href="#references" id="nav-references">References</a>
@@ -37,10 +47,24 @@
         </nav>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language toggle">
-            <button class="btn btn-secondary btn-small lang-switch active" data-lang="en" type="button">EN</button>
-            <button class="btn btn-secondary btn-small lang-switch" data-lang="de" type="button">DE</button>
+            <button
+              class="btn btn-secondary btn-small lang-switch active"
+              data-lang="en"
+              type="button"
+            >
+              EN
+            </button>
+            <button
+              class="btn btn-secondary btn-small lang-switch"
+              data-lang="de"
+              type="button"
+            >
+              DE
+            </button>
           </div>
-          <a href="#contact" class="btn btn-primary btn-small" id="nav-talk">Talk to us</a>
+          <a href="#contact" class="btn btn-primary btn-small" id="nav-talk"
+            >Talk to us</a
+          >
         </div>
       </div>
     </header>
@@ -53,113 +77,191 @@
               Business meets HR — <br />a modern consulting partner for growth,
               transformation and talent development.
             </h1>
-            <ul class="hero-points" id="hero-points">
-              <li>Strategic business development</li>
-              <li>Transformation & leadership alignment</li>
-              <li>HR excellence & talent development</li>
-            </ul>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary" id="hero-talk">Talk to us now</a>
+              <a href="#contact" class="btn btn-primary" id="hero-talk"
+                >Talk to us now</a
+              >
               <a href="#expertise" class="btn btn-secondary" id="hero-explore"
                 >Explore expertise</a
               >
             </div>
           </div>
           <div class="hero-card">
-            <div class="hero-card-inner">
-              <h2 id="hero-card-title">We turn expertise into progress.</h2>
-              <p id="hero-card-text">
-                By combining strategic thinking, business insight, and
-                people-focused consulting, we help organizations achieve the
-                goals that matter most — with clarity, structure, and real
-                momentum.
-              </p>
-               <a href="#expertise">
-    
-            </div>
+            <a
+              href="#expertise"
+              class="hero-card-link"
+              aria-label="Click here to see more expertise"
+            >
+              <div class="hero-card-reveal" aria-hidden="true">
+                <div class="hero-card-cta">
+                  <span class="hero-card-cta-text">Read more</span>
+                  <span class="hero-card-cta-icon">❯</span>
+                </div>
+              </div>
+              <div class="hero-card-inner">
+                <h2 id="hero-card-title">We turn expertise into progress.</h2>
+                <p id="hero-card-text">
+                  By combining strategic thinking, business insight, and
+                  people-focused consulting, we help organizations achieve the
+                  goals that matter most — with clarity, structure, and real
+                  momentum.
+                </p>
+                <ul class="hero-points" id="hero-points">
+                  <li>Strategic business Development</li>
+                  <li>Transformation & Leadership Alignment</li>
+                  <li>HR Excellence & Talent Development</li>
+                </ul>
+              </div>
+            </a>
           </div>
         </div>
       </section>
       <section class="section section-light" id="mission">
         <div class="container">
           <div class="services-grid">
-             <h2 id="mission-text">
-             We help companies advance with pragmatic transformation: business‑focused thinking, people‑centered execution, and a tight link between strategy, market opportunity, and operations—replacing vague promises with clear outcomes, structured programs, and measurable progress.
-            </h2>                               
-          </div>          
+            <h2 id="mission-text">
+              We help companies advance with pragmatic transformation:
+              business‑focused thinking, people‑centered execution, and a tight
+              link between strategy, market opportunity, and
+              operations—replacing vague promises with clear outcomes,
+              structured programs, and measurable progress.
+            </h2>
+          </div>
         </div>
       </section>
       <section class="section" id="expertise">
         <div class="container">
           <div class="section-heading">
             <div class="kicker-container">
-            <p class="section-kicker" id="expertise-kicker">Our Expertise</p>
-            <h2 id="expertise-heading">Three strong service areas with room to scale.</h2>
-            <p class="section-intro" id="expertise-intro">
-              We turn practical expertise into business outcomes by matching leadership, market development and HR programs with measurable progress.
-            </p>
+              <p class="section-kicker" id="expertise-kicker">Our Expertise</p>
+              <h2 id="expertise-heading">
+                Three strong service areas with room to scale.
+              </h2>
+              <p class="section-intro" id="expertise-intro">
+                We turn practical expertise into business outcomes by matching
+                leadership, market development and HR programs with measurable
+                progress.
+              </p>
             </div>
           </div>
           <div class="services-grid">
-            <article class="service-card" data-expertise="business-transformation" role="button" tabindex="0">
-              
+            <article
+              class="service-card"
+              data-expertise="business-transformation"
+              role="button"
+              tabindex="0"
+            >
               <h3 id="service-1-title">Business Transformation</h3>
               <p id="service-1-text">
-                Align leadership, strategy and teams around one clear direction for change.
+                Align leadership, strategy and teams around one clear direction
+                for change.
               </p>
-            
+
               <span class="card-action" id="service-1-action">See More!</span>
             </article>
-            <article class="service-card" data-expertise="growth-market-development" role="button" tabindex="0">
-             
+            <article
+              class="service-card"
+              data-expertise="growth-market-development"
+              role="button"
+              tabindex="0"
+            >
               <h3 id="service-2-title">Growth & Market Development</h3>
               <p id="service-2-text">
-                Support new customer opportunities, strategic market development and commercial focus.
+                Support new customer opportunities, strategic market development
+                and commercial focus.
               </p>
-              
+
               <span class="card-action" id="service-2-action">See More!</span>
             </article>
-            <article class="service-card" data-expertise="hr-excellence" role="button" tabindex="0">
-             
+            <article
+              class="service-card"
+              data-expertise="hr-excellence"
+              role="button"
+              tabindex="0"
+            >
               <h3 id="service-3-title">Leadership & HR Excellence</h3>
               <p id="service-3-text">
-                Build stronger HR structures that actively support business goals and leadership development.
+                Build stronger HR structures that actively support business
+                goals and leadership development.
               </p>
-              
+
               <span class="card-action" id="service-3-action">See More!</span>
             </article>
           </div>
-           <a href="#contact" class="text-link" id="expertise-talk-link">Let's Talk!</a>
         </div>
       </section>
       <div class="expertise-modal" id="expertise-modal" aria-hidden="true">
         <div class="expertise-modal-backdrop" data-close="modal"></div>
-        <div class="expertise-modal-panel" role="dialog" aria-modal="true" aria-labelledby="expertise-modal-title">
-          <button class="modal-close" type="button" aria-label="Close details">&times;</button>
+        <div
+          class="expertise-modal-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="expertise-modal-title"
+        >
+          <button class="modal-close" type="button" aria-label="Close details">
+            &times;
+          </button>
           <div class="modal-content">
-            <p class="section-kicker modal-kicker" id="expertise-modal-label">Expertise overview</p>
+            <p class="section-kicker modal-kicker" id="expertise-modal-label">
+              Expertise overview
+            </p>
             <h3 id="expertise-modal-title"></h3>
             <p class="modal-description" id="expertise-modal-description"></p>
             <div class="modal-projects">
-              <p class="modal-projects-heading" id="expertise-modal-projects-heading">Related fact sheets</p>
+              <p
+                class="modal-projects-heading"
+                id="expertise-modal-projects-heading"
+              >
+                Related fact sheets
+              </p>
               <ul id="expertise-modal-projects"></ul>
             </div>
-            <p class="modal-note" id="expertise-modal-note">All matching fact sheets are available in the Fact Sheets folder.</p>
+            <p class="modal-note" id="expertise-modal-note">
+              All matching fact sheets are available in the Fact Sheets folder.
+            </p>
           </div>
         </div>
       </div>
       <div class="factsheet-modal" id="factsheet-modal" aria-hidden="true">
         <div class="factsheet-modal-backdrop" data-close="factsheet"></div>
-        <div class="factsheet-modal-panel" role="dialog" aria-modal="true" aria-labelledby="factsheet-modal-title">
-          <button class="modal-close factsheet-back-button" type="button" aria-label="Close fact sheet">&#8249; back</button>
-          <div class="factsheet-modal-content" id="factsheet-modal-content"></div>
+        <div
+          class="factsheet-modal-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="factsheet-modal-title"
+        >
+          <button
+            class="modal-close factsheet-back-button"
+            type="button"
+            aria-label="Close fact sheet"
+          >
+            &#8249; back
+          </button>
+          <div
+            class="factsheet-modal-content"
+            id="factsheet-modal-content"
+          ></div>
         </div>
       </div>
       <div class="consultant-modal" id="consultant-modal" aria-hidden="true">
         <div class="consultant-modal-backdrop" data-close="consultant"></div>
-        <div class="consultant-modal-panel" role="dialog" aria-modal="true" aria-labelledby="consultant-modal-title">
-          <button class="modal-close" type="button" aria-label="Close consultant profile">&times;</button>
-          <div class="consultant-modal-content" id="consultant-modal-content"></div>
+        <div
+          class="consultant-modal-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="consultant-modal-title"
+        >
+          <button
+            class="modal-close"
+            type="button"
+            aria-label="Close consultant profile"
+          >
+            &times;
+          </button>
+          <div
+            class="consultant-modal-content"
+            id="consultant-modal-content"
+          ></div>
         </div>
       </div>
       <section class="section section-light" id="consultants">
@@ -167,43 +269,73 @@
           <div class="section-heading">
             <div class="kicker-container">
               <p class="section-kicker" id="consultants-kicker">Consultants</p>
-              <h2 id="consultants-heading">Experienced leadership partners for complex growth journeys.</h2>
+              <h2 id="consultants-heading">
+                Experienced leadership partners for complex growth journeys.
+              </h2>
               <p class="section-intro" id="consultants-intro">
-                Our consultants combine executive experience and practical implementation expertise. Click a profile to see detailed background and focus areas.
+                Our consultants combine executive experience and practical
+                implementation expertise. Click a profile to see detailed
+                background and focus areas.
               </p>
             </div>
           </div>
           <div class="consultants-grid">
-            <article class="consultant-card" data-consultant="kurt" role="button" tabindex="0" aria-label="Open profile for Kurt Schraudy">
-              <div class="consultant-avatar" aria-hidden="true">KS</div>
+            <article
+              class="consultant-card"
+              data-consultant="kurt"
+              role="button"
+              tabindex="0"
+              aria-label="Open profile for Kurt Schraudy"
+            >
+              <div class="consultant-avatar" aria-hidden="true">
+                <img src="images/Kurt-SChraudy-bw.avif" alt="" loading="lazy" />
+              </div>
               <div class="consultant-content">
                 <h3>Kurt Schraudy</h3>
-                <p class="consultant-role" id="consultant-kurt-role">Founder / Advisor</p>
+                <p class="consultant-role" id="consultant-kurt-role">
+                  Founder / Advisor
+                </p>
                 <p class="consultant-summary" id="consultant-kurt-summary">
-                  Executive advisor with deep experience in business transformation, leadership alignment and commercially driven growth programs.
+                  Executive advisor with deep experience in business
+                  transformation, leadership alignment and commercially driven
+                  growth programs.
                 </p>
                 <ul class="meta-list">
                   <li id="consultant-kurt-meta-1">General management</li>
                   <li id="consultant-kurt-meta-2">Business transformation</li>
                   <li id="consultant-kurt-meta-3">Executive advisory</li>
                 </ul>
-                <span class="consultant-action" id="consultant-kurt-action">View profile</span>
+                <span class="consultant-action" id="consultant-kurt-action"
+                  >View profile</span
+                >
               </div>
             </article>
-            <article class="consultant-card" data-consultant="lina" role="button" tabindex="0" aria-label="Open profile for Lina Chan">
-              <div class="consultant-avatar" aria-hidden="true">LC</div>
+            <article
+              class="consultant-card"
+              data-consultant="lina"
+              role="button"
+              tabindex="0"
+              aria-label="Open profile for Lina Chan"
+            >
+              <div class="consultant-avatar" aria-hidden="true">
+                <img src="images/Lina-Chan- bw.avif" alt="" loading="lazy" />
+              </div>
               <div class="consultant-content">
                 <h3>Lina Chan</h3>
                 <p class="consultant-role" id="consultant-lina-role">Advisor</p>
                 <p class="consultant-summary" id="consultant-lina-summary">
-                  International advisor focused on market development, IP strategy and sustainable growth initiatives across multiple regions.
+                  International advisor focused on market development, IP
+                  strategy and sustainable growth initiatives across multiple
+                  regions.
                 </p>
                 <ul class="meta-list">
                   <li id="consultant-lina-meta-1">Business development</li>
                   <li id="consultant-lina-meta-2">IP strategy</li>
                   <li id="consultant-lina-meta-3">Green energy markets</li>
                 </ul>
-                <span class="consultant-action" id="consultant-lina-action">View profile</span>
+                <span class="consultant-action" id="consultant-lina-action"
+                  >View profile</span
+                >
               </div>
             </article>
           </div>
@@ -216,7 +348,9 @@
             <p class="section-kicker" id="contact-kicker">Contact</p>
             <h2 id="contact-heading">Let’s get in touch!</h2>
             <p id="contact-text">
-              Send a mail, or call so we can get to know you better. We look forward to speaking with you. I will get back to you as soon as possible.
+              Send a mail, or call so we can get to know you better. We look
+              forward to speaking with you. I will get back to you as soon as
+              possible.
             </p>
 
             <div class="contact-details">
@@ -224,10 +358,14 @@
                 <span class="detail-label" id="detail-mail-label">Mail</span>
                 <a href="mailto:info@applied-bd.com">info@applied-bd.com</a>
               </div>
-            
+
               <div class="detail-card">
-                <span class="detail-label" id="detail-location-label">Location</span>
-                <span id="detail-location-value">Munich / Remote / International</span>
+                <span class="detail-label" id="detail-location-label"
+                  >Location</span
+                >
+                <span id="detail-location-value"
+                  >Munich / Remote / International</span
+                >
               </div>
             </div>
           </div>
@@ -257,7 +395,11 @@
               ></textarea>
             </div>
 
-            <button id="contact-submit" type="submit" class="btn btn-primary full-width">
+            <button
+              id="contact-submit"
+              type="submit"
+              class="btn btn-primary full-width"
+            >
               Send message
             </button>
           </form>
@@ -269,14 +411,14 @@
       <div class="container footer-row">
         <p id="footer-copy">© 2026 Applied Business Development</p>
         <div class="footer-links">
-          <a href="#" id="footer-imprint">Imprint</a>
-          <a href="#" id="footer-privacy">Privacy</a>
+          <a href="impressum.html" id="footer-imprint">Imprint</a>
+          <a href="datenschutz.html" id="footer-privacy">Privacy</a>
           <a href="#top" id="footer-top">Back to top</a>
         </div>
       </div>
     </footer>
-    
-<script src="display-detect.js"></script>
-<script src="expertise-lightbox.js"></script>
+
+    <script src="display-detect.js"></script>
+    <script src="expertise-lightbox.js"></script>
   </body>
 </html>

@@ -543,6 +543,7 @@ function getFactsheetTitleByFile(filePath, lang) {
 const consultantProfiles = {
   kurt: {
     name: "Kurt Schraudy",
+    image: "images/Kurt-SChraudy-bw.avif",
     role: {
       en: "Founder / Advisor",
       de: "Gründer / Berater",
@@ -576,6 +577,7 @@ const consultantProfiles = {
   },
   lina: {
     name: "Lina Chan",
+    image: "images/Lina-Chan- bw.avif",
     role: {
       en: "Advisor",
       de: "Beraterin",
@@ -962,9 +964,12 @@ function openConsultantModal(consultantKey) {
 
   elements.consultantModalContent.innerHTML = `
     <div class="consultant-modal-header">
-      <p class="section-kicker modal-kicker">${labels.kicker}</p>
-      <h3 id="consultant-modal-title">${consultant.name}</h3>
-      <p class="consultant-modal-role">${consultant.role[language]}</p>
+      <img class="consultant-modal-photo" src="${consultant.image}" alt="${consultant.name}" loading="lazy" />
+      <div class="consultant-modal-header-text">
+        <p class="section-kicker modal-kicker">${labels.kicker}</p>
+        <h3 id="consultant-modal-title">${consultant.name}</h3>
+        <p class="consultant-modal-role">${consultant.role[language]}</p>
+      </div>
     </div>
     <p class="consultant-modal-lead">${consultant.lead[language]}</p>
     <div class="consultant-modal-columns">
@@ -977,13 +982,28 @@ function openConsultantModal(consultantKey) {
         <p>${consultant.highlights[language]}</p>
       </div>
     </div>
-    <div class="consultant-modal-block">
-      <h4>${labels.focusAreas}</h4>
-      <ul class="consultant-modal-expertise">
-        ${consultant.expertise[language]
-          .map((item) => `<li>${item}</li>`)
-          .join("")}
-      </ul>
+    <div class="consultant-modal-bottom-row">
+      <div class="consultant-modal-block">
+        <h4>${labels.focusAreas}</h4>
+        <ul class="consultant-modal-expertise">
+          ${consultant.expertise[language]
+            .map((item) => `<li>${item}</li>`)
+            .join("")}
+        </ul>
+      </div>
+      <a
+        class="consultant-modal-contact-card"
+        href="mailto:info@applied-bd.com"
+        aria-label="Send email to info@applied-bd.com"
+      >
+        <img
+          class="consultant-modal-contact-icon"
+          src="images/send-mail.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <span class="consultant-modal-contact-cta">Get in touch!</span>
+      </a>
     </div>
   `;
 
