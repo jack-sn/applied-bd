@@ -543,7 +543,7 @@ function getFactsheetTitleByFile(filePath, lang) {
 const consultantProfiles = {
   kurt: {
     name: "Kurt Schraudy",
-    image: "images/Kurt-SChraudy-bw.avif",
+    image: "images/Kurt-Schraudy-bw.avif",
     role: {
       en: "Founder / Advisor",
       de: "Gründer / Berater",
@@ -577,7 +577,7 @@ const consultantProfiles = {
   },
   lina: {
     name: "Lina Chan",
-    image: "images/Lina-Chan- bw.avif",
+    image: "images/Lina-Chan-bw.avif",
     role: {
       en: "Advisor",
       de: "Beraterin",
