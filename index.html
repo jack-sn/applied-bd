@@ -15,16 +15,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      (function redirectToConstruction() {
-        const params = new URLSearchParams(window.location.search);
-        const isPreviewMode = params.get("preview") === "1";
-
-        if (!isPreviewMode) {
-          window.location.replace("under-construction.html");
-        }
-      })();
-    </script>
   </head>
 
   <body>
