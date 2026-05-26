@@ -1,15 +1,15 @@
 const expertiseData = {
   "business-transformation": {
     title: {
-      en: "Business Transformation",
+      en: "Strategic Alignment & Leadership Strength",
 
-      de: "Business Transformation",
+      de: "Strategische Ausrichtung & Führungsstärke",
     },
 
     description: {
-      en: "Align leadership, strategy and teams around one direction to make change sustainable and measurable.",
+      en: "We consistently align business strategy, management team and executives for growth, sales success and successful transformation — complemented by executive coaching and engagement workshops for your leadership team.",
 
-      de: "Führung, Strategie und Teams auf ein gemeinsames Ziel ausrichten, um Wandel nachhaltig und messbar zu gestalten.",
+      de: "Wir richten Geschäftsstrategie, Management-Team und Führungskräfte konsequent auf Wachstum, Vertriebserfolg und erfolgreiche Transformation aus – ergänzt durch Executive Coaching und Engagement-Workshops für Ihr Führungsteam.",
     },
 
     projects: {
@@ -45,15 +45,15 @@ const expertiseData = {
 
   "growth-market-development": {
     title: {
-      en: "Growth & Market Development",
+      en: "New Markets and Sales Performance",
 
-      de: "Wachstum & Marktentwicklung",
+      de: "Neue Märkte und Sales-Performance",
     },
 
     description: {
-      en: "Sharpen customer focus, commercial execution and go-to-market initiatives to turn opportunity into growth.",
+      en: "We support you in market entry and business expansion in Germany and Europe — from market and competitive analysis to practical company formation. At the same time, we increase your closing strength through analyses of your sales potential, deal workshops and training to enhance effectiveness in direct customer contact.",
 
-      de: "Kundenfokus, kommerzielle Umsetzung und Markteintrittsstrategien schärfen, um Chancen in Wachstum zu verwandeln.",
+      de: "Wir unterstützen Sie beim Markteintritt und Geschäftsausbau in Deutschland und Europa – von der Markt- und Wettbewerbsanalyse bis hin zur praktischen Unternehmensgründung. Gleichzeitig steigern wir Ihre Abschlussstärke durch Analysen Ihres Vertriebspotenzials, Deal Workshops und Trainings zur Wirkungssteigerung im direkten Kundenkontakt.",
     },
 
     projects: {
@@ -108,15 +108,15 @@ const expertiseData = {
 
   "hr-excellence": {
     title: {
-      en: "HR Excellence",
+      en: "HR Excellence for Transformation & Engagement",
 
-      de: "HR Excellence",
+      de: "HR Excellence für Transformation & Engagement",
     },
 
     description: {
-      en: "Build HR and leadership systems that strengthen talent, performance and organizational capability.",
+      en: "We make your HR organization a driver of business transformation, link your HR instruments with corporate goals and develop an actionable implementation plan with clear KPIs. This includes professional recruiting, onboarding and growth-oriented performance management. We also offer interim HR leadership when you need professional support at short notice.",
 
-      de: "HR- und Führungsstrukturen aufbauen, die Talent, Leistung und organisatorische Stärke fördern.",
+      de: "Wir machen Ihre HR Organisation zum Treiber der Business Transformation, verknüpfen Ihre HR Instrumente mit den Unternehmenszielen und entwickeln einen umsetzbaren Implementierungsplan mit klaren KPIs. Dazu gehören professionelles Recruiting, Onboarding und wachstumsorientiertes Performance Management. Wir bieten zudem Interim HR Führung, wenn Sie kurzfristig professionelle Unterstützung brauchen.",
     },
 
     projects: {
@@ -159,10 +159,10 @@ const expertiseData = {
 
 const uiText = {
   en: {
-    heroEyebrow: "The Consulting Boutique",
+    heroEyebrow: "The Consulting Boutique: applied business development",
 
     heroHeading:
-      "Business meets HR — a modern consulting partner for growth, transformation and talent development.",
+      "Business meets HR — We support your company in opening new markets and successfully implementing transformations — with international business and HR expertise as well as pragmatic leadership and implementation competence.",
 
     heroPoints: [
       "Strategic business development",
@@ -184,15 +184,15 @@ const uiText = {
     navTalk: "Talk to us",
 
     missionText:
-      "We help companies advance with pragmatic transformation: business-focused thinking, people-centered execution, and a tight link between strategy, market opportunity, and operations—replacing vague promises with clear outcomes, structured programs, and measurable progress.",
+      "Our mission is to position companies in terms of sales and leadership so that growth, new markets, transformation and HR truly work together — instead of running alongside each other. For this, we combine practical sales excellence, executive coaching and HR excellence into implementation-strong programs that directly address real projects, teams and customers.",
 
     expertiseKicker: "Our Expertise",
 
-    expertiseHeading: "Three strong service areas with room to scale.",
+    expertiseHeading: "Our Expertise, Your Benefit!",
 
     serviceAction: "See More!",
 
-    service3Title: "Leadership & HR Excellence",
+    service3Title: "HR Excellence for Transformation & Engagement",
 
     expertiseTalkLink: "Let's Talk!",
 
@@ -200,6 +200,10 @@ const uiText = {
 
     consultantsHeading:
       "Experienced leadership partners for complex growth journeys.",
+
+    referencesKicker: "References",
+
+    referencesHeading: "Trusted by leaders across industries and regions.",
 
     consultantsIntro:
       "Our consultants combine executive experience and practical implementation expertise. Click a profile to see detailed background and focus areas.",
@@ -348,6 +352,11 @@ const uiText = {
     consultantsHeading:
       "Erfahrene Sparringspartner für anspruchsvolle Wachstumsphasen.",
 
+    referencesKicker: "Referenzen",
+
+    referencesHeading:
+      "Vertrauen von Führungskräften aus unterschiedlichsten Branchen und Regionen.",
+
     consultantsIntro:
       "Unsere Berater verbinden Executive-Erfahrung mit pragmatischer Umsetzungskompetenz. Klicken Sie auf ein Profil für detaillierte Hintergründe und Schwerpunkte.",
 
@@ -455,8 +464,9 @@ const uiText = {
 };
 
 const state = {
-  lang: "en",
+  lang: "de",
   activeFactsheetProject: null,
+  originalTexts: {},
 };
 
 const availableFactsheetFiles = new Set([
@@ -697,6 +707,10 @@ const elements = {
   consultantsKicker: document.getElementById("consultants-kicker"),
 
   consultantsHeading: document.getElementById("consultants-heading"),
+
+  referencesKicker: document.getElementById("references-kicker"),
+
+  referencesHeading: document.getElementById("references-heading"),
 
   consultantsIntro: document.getElementById("consultants-intro"),
 
@@ -1034,181 +1048,206 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  if (elements.heroEyebrow) {
-    elements.heroEyebrow.textContent = uiText[lang].heroEyebrow;
+  // Restore original HTML text values for DE
+  if (lang === "de") {
+    Object.keys(state.originalTexts).forEach((id) => {
+      const el = document.getElementById(id);
+      if (el && state.originalTexts[id]) {
+        el.textContent = state.originalTexts[id];
+      }
+    });
   }
 
-  if (elements.heroHeading) {
-    elements.heroHeading.textContent = uiText[lang].heroHeading;
-  }
-
-  if (
-    state.activeFactsheetProject &&
-    elements.factsheetModal.classList.contains("open")
-  ) {
-    openFactsheet(state.activeFactsheetProject, lang);
-  }
-
-  if (elements.heroCardTitle)
-    elements.heroCardTitle.textContent = uiText[lang].heroCardTitle;
-
-  if (elements.heroCardText)
-    elements.heroCardText.textContent = uiText[lang].heroCardText;
-
-  if (elements.missionText)
-    elements.missionText.textContent = uiText[lang].missionText;
-
-  if (elements.expertiseKicker)
-    elements.expertiseKicker.textContent = uiText[lang].expertiseKicker;
-
-  if (elements.expertiseHeading)
-    elements.expertiseHeading.textContent = uiText[lang].expertiseHeading;
-
-  if (elements.service1Title)
-    elements.service1Title.textContent =
-      expertiseData["business-transformation"].title[lang];
-
-  if (elements.service1Text)
-    elements.service1Text.textContent =
-      expertiseData["business-transformation"].description[lang];
-
-  if (elements.service2Title)
-    elements.service2Title.textContent =
-      expertiseData["growth-market-development"].title[lang];
-
-  if (elements.service2Text)
-    elements.service2Text.textContent =
-      expertiseData["growth-market-development"].description[lang];
-
-  if (elements.service3Title)
-    elements.service3Title.textContent = uiText[lang].service3Title;
-
-  if (elements.service3Text)
-    elements.service3Text.textContent =
-      expertiseData["hr-excellence"].description[lang];
-
-  if (elements.service1Action)
-    elements.service1Action.textContent = uiText[lang].serviceAction;
-  if (elements.service2Action)
-    elements.service2Action.textContent = uiText[lang].serviceAction;
-  if (elements.service3Action)
-    elements.service3Action.textContent = uiText[lang].serviceAction;
-
-  if (elements.expertiseTalkLink)
-    elements.expertiseTalkLink.textContent = uiText[lang].expertiseTalkLink;
-
-  if (elements.consultantsKicker)
-    elements.consultantsKicker.textContent = uiText[lang].consultantsKicker;
-
-  if (elements.consultantsHeading)
-    elements.consultantsHeading.textContent = uiText[lang].consultantsHeading;
-
-  if (elements.consultantsIntro)
-    elements.consultantsIntro.textContent = uiText[lang].consultantsIntro;
-
-  if (elements.consultantKurtRole)
-    elements.consultantKurtRole.textContent =
-      uiText[lang].consultants.kurt.role;
-  if (elements.consultantKurtSummary)
-    elements.consultantKurtSummary.textContent =
-      uiText[lang].consultants.kurt.summary;
-  if (elements.consultantKurtMeta1)
-    elements.consultantKurtMeta1.textContent =
-      uiText[lang].consultants.kurt.meta[0];
-  if (elements.consultantKurtMeta2)
-    elements.consultantKurtMeta2.textContent =
-      uiText[lang].consultants.kurt.meta[1];
-  if (elements.consultantKurtMeta3)
-    elements.consultantKurtMeta3.textContent =
-      uiText[lang].consultants.kurt.meta[2];
-  if (elements.consultantKurtAction)
-    elements.consultantKurtAction.textContent = uiText[lang].consultants.action;
-
-  if (elements.consultantLinaRole)
-    elements.consultantLinaRole.textContent =
-      uiText[lang].consultants.lina.role;
-  if (elements.consultantLinaSummary)
-    elements.consultantLinaSummary.textContent =
-      uiText[lang].consultants.lina.summary;
-  if (elements.consultantLinaMeta1)
-    elements.consultantLinaMeta1.textContent =
-      uiText[lang].consultants.lina.meta[0];
-  if (elements.consultantLinaMeta2)
-    elements.consultantLinaMeta2.textContent =
-      uiText[lang].consultants.lina.meta[1];
-  if (elements.consultantLinaMeta3)
-    elements.consultantLinaMeta3.textContent =
-      uiText[lang].consultants.lina.meta[2];
-  if (elements.consultantLinaAction)
-    elements.consultantLinaAction.textContent = uiText[lang].consultants.action;
-
-  elements.consultantCards.forEach((card) => {
-    const consultantKey = card.dataset.consultant;
-    if (consultantKey && uiText[lang].consultants.aria[consultantKey]) {
-      card.setAttribute(
-        "aria-label",
-        uiText[lang].consultants.aria[consultantKey],
-      );
+  // Only apply EN translations - DE uses HTML defaults
+  if (lang === "en") {
+    if (elements.heroEyebrow) {
+      elements.heroEyebrow.textContent = uiText[lang].heroEyebrow;
     }
-  });
 
-  if (elements.contactKicker)
-    elements.contactKicker.textContent = uiText[lang].contactKicker;
+    if (elements.heroHeading) {
+      elements.heroHeading.textContent = uiText[lang].heroHeading;
+    }
 
-  if (elements.detailMailLabel)
-    elements.detailMailLabel.textContent = uiText[lang].detailMailLabel;
-  if (elements.detailLocationLabel)
-    elements.detailLocationLabel.textContent = uiText[lang].detailLocationLabel;
-  if (elements.detailLocationValue)
-    elements.detailLocationValue.textContent = uiText[lang].detailLocationValue;
+    if (elements.heroCardTitle)
+      elements.heroCardTitle.textContent = uiText[lang].heroCardTitle;
 
-  if (elements.formNameLabel)
-    elements.formNameLabel.textContent = uiText[lang].formNameLabel;
-  if (elements.formEmailLabel)
-    elements.formEmailLabel.textContent = uiText[lang].formEmailLabel;
-  if (elements.formSubjectLabel)
-    elements.formSubjectLabel.textContent = uiText[lang].formSubjectLabel;
-  if (elements.formMessageLabel)
-    elements.formMessageLabel.textContent = uiText[lang].formMessageLabel;
+    if (elements.heroCardText)
+      elements.heroCardText.textContent = uiText[lang].heroCardText;
 
-  if (elements.formNameInput)
-    elements.formNameInput.placeholder = uiText[lang].formNamePlaceholder;
-  if (elements.formEmailInput)
-    elements.formEmailInput.placeholder = uiText[lang].formEmailPlaceholder;
-  if (elements.formSubjectInput)
-    elements.formSubjectInput.placeholder = uiText[lang].formSubjectPlaceholder;
-  if (elements.formMessageInput)
-    elements.formMessageInput.placeholder = uiText[lang].formMessagePlaceholder;
+    if (elements.missionText)
+      elements.missionText.textContent = uiText[lang].missionText;
 
-  if (elements.footerCopy)
-    elements.footerCopy.textContent = uiText[lang].footerCopy;
-  if (elements.footerImprint)
-    elements.footerImprint.textContent = uiText[lang].footerImprint;
-  if (elements.footerPrivacy)
-    elements.footerPrivacy.textContent = uiText[lang].footerPrivacy;
-  if (elements.footerTop)
-    elements.footerTop.textContent = uiText[lang].footerTop;
+    if (elements.expertiseKicker)
+      elements.expertiseKicker.textContent = uiText[lang].expertiseKicker;
 
-  const expertiseClose = elements.modal?.querySelector(".modal-close");
-  const factsheetClose = elements.factsheetModal?.querySelector(".modal-close");
-  const consultantClose =
-    elements.consultantModal?.querySelector(".modal-close");
+    if (elements.expertiseHeading)
+      elements.expertiseHeading.textContent = uiText[lang].expertiseHeading;
 
-  if (expertiseClose)
-    expertiseClose.setAttribute(
-      "aria-label",
-      uiText[lang].closeLabels.expertise,
-    );
-  if (factsheetClose)
-    factsheetClose.setAttribute(
-      "aria-label",
-      uiText[lang].closeLabels.factsheet,
-    );
-  if (consultantClose)
-    consultantClose.setAttribute(
-      "aria-label",
-      uiText[lang].closeLabels.consultant,
-    );
+    if (elements.service1Title)
+      elements.service1Title.textContent =
+        expertiseData["business-transformation"].title[lang];
+
+    if (elements.service1Text)
+      elements.service1Text.textContent =
+        expertiseData["business-transformation"].description[lang];
+
+    if (elements.service2Title)
+      elements.service2Title.textContent =
+        expertiseData["growth-market-development"].title[lang];
+
+    if (elements.service2Text)
+      elements.service2Text.textContent =
+        expertiseData["growth-market-development"].description[lang];
+
+    if (elements.service3Title)
+      elements.service3Title.textContent = uiText[lang].service3Title;
+
+    if (elements.service3Text)
+      elements.service3Text.textContent =
+        expertiseData["hr-excellence"].description[lang];
+
+    if (elements.service1Action)
+      elements.service1Action.textContent = uiText[lang].serviceAction;
+    if (elements.service2Action)
+      elements.service2Action.textContent = uiText[lang].serviceAction;
+    if (elements.service3Action)
+      elements.service3Action.textContent = uiText[lang].serviceAction;
+
+    if (elements.expertiseTalkLink)
+      elements.expertiseTalkLink.textContent = uiText[lang].expertiseTalkLink;
+
+    if (elements.consultantsKicker)
+      elements.consultantsKicker.textContent = uiText[lang].consultantsKicker;
+
+    if (elements.consultantsHeading)
+      elements.consultantsHeading.textContent = uiText[lang].consultantsHeading;
+
+    if (elements.referencesKicker)
+      elements.referencesKicker.textContent = uiText[lang].referencesKicker;
+
+    if (elements.referencesHeading)
+      elements.referencesHeading.textContent = uiText[lang].referencesHeading;
+
+    if (elements.consultantsIntro)
+      elements.consultantsIntro.textContent = uiText[lang].consultantsIntro;
+
+    if (elements.consultantKurtRole)
+      elements.consultantKurtRole.textContent =
+        uiText[lang].consultants.kurt.role;
+    if (elements.consultantKurtSummary)
+      elements.consultantKurtSummary.textContent =
+        uiText[lang].consultants.kurt.summary;
+    if (elements.consultantKurtMeta1)
+      elements.consultantKurtMeta1.textContent =
+        uiText[lang].consultants.kurt.meta[0];
+    if (elements.consultantKurtMeta2)
+      elements.consultantKurtMeta2.textContent =
+        uiText[lang].consultants.kurt.meta[1];
+    if (elements.consultantKurtMeta3)
+      elements.consultantKurtMeta3.textContent =
+        uiText[lang].consultants.kurt.meta[2];
+    if (elements.consultantKurtAction)
+      elements.consultantKurtAction.textContent =
+        uiText[lang].consultants.action;
+
+    if (elements.consultantLinaRole)
+      elements.consultantLinaRole.textContent =
+        uiText[lang].consultants.lina.role;
+    if (elements.consultantLinaSummary)
+      elements.consultantLinaSummary.textContent =
+        uiText[lang].consultants.lina.summary;
+    if (elements.consultantLinaMeta1)
+      elements.consultantLinaMeta1.textContent =
+        uiText[lang].consultants.lina.meta[0];
+    if (elements.consultantLinaMeta2)
+      elements.consultantLinaMeta2.textContent =
+        uiText[lang].consultants.lina.meta[1];
+    if (elements.consultantLinaMeta3)
+      elements.consultantLinaMeta3.textContent =
+        uiText[lang].consultants.lina.meta[2];
+    if (elements.consultantLinaAction)
+      elements.consultantLinaAction.textContent =
+        uiText[lang].consultants.action;
+  }
+
+  // Apply remaining translations only for EN
+  if (lang === "en") {
+    elements.consultantCards.forEach((card) => {
+      const consultantKey = card.dataset.consultant;
+      if (consultantKey && uiText[lang].consultants.aria[consultantKey]) {
+        card.setAttribute(
+          "aria-label",
+          uiText[lang].consultants.aria[consultantKey],
+        );
+      }
+    });
+
+    if (elements.contactKicker)
+      elements.contactKicker.textContent = uiText[lang].contactKicker;
+
+    if (elements.detailMailLabel)
+      elements.detailMailLabel.textContent = uiText[lang].detailMailLabel;
+    if (elements.detailLocationLabel)
+      elements.detailLocationLabel.textContent =
+        uiText[lang].detailLocationLabel;
+    if (elements.detailLocationValue)
+      elements.detailLocationValue.textContent =
+        uiText[lang].detailLocationValue;
+
+    if (elements.formNameLabel)
+      elements.formNameLabel.textContent = uiText[lang].formNameLabel;
+    if (elements.formEmailLabel)
+      elements.formEmailLabel.textContent = uiText[lang].formEmailLabel;
+    if (elements.formSubjectLabel)
+      elements.formSubjectLabel.textContent = uiText[lang].formSubjectLabel;
+    if (elements.formMessageLabel)
+      elements.formMessageLabel.textContent = uiText[lang].formMessageLabel;
+
+    if (elements.formNameInput)
+      elements.formNameInput.placeholder = uiText[lang].formNamePlaceholder;
+    if (elements.formEmailInput)
+      elements.formEmailInput.placeholder = uiText[lang].formEmailPlaceholder;
+    if (elements.formSubjectInput)
+      elements.formSubjectInput.placeholder =
+        uiText[lang].formSubjectPlaceholder;
+    if (elements.formMessageInput)
+      elements.formMessageInput.placeholder =
+        uiText[lang].formMessagePlaceholder;
+
+    if (elements.footerCopy)
+      elements.footerCopy.textContent = uiText[lang].footerCopy;
+    if (elements.footerImprint)
+      elements.footerImprint.textContent = uiText[lang].footerImprint;
+    if (elements.footerPrivacy)
+      elements.footerPrivacy.textContent = uiText[lang].footerPrivacy;
+    if (elements.footerTop)
+      elements.footerTop.textContent = uiText[lang].footerTop;
+  }
+
+  // Apply aria-labels and modal translations only for EN
+  if (lang === "en") {
+    const expertiseClose = elements.modal?.querySelector(".modal-close");
+    const factsheetClose =
+      elements.factsheetModal?.querySelector(".modal-close");
+    const consultantClose =
+      elements.consultantModal?.querySelector(".modal-close");
+
+    if (expertiseClose)
+      expertiseClose.setAttribute(
+        "aria-label",
+        uiText[lang].closeLabels.expertise,
+      );
+    if (factsheetClose)
+      factsheetClose.setAttribute(
+        "aria-label",
+        uiText[lang].closeLabels.factsheet,
+      );
+    if (consultantClose)
+      consultantClose.setAttribute(
+        "aria-label",
+        uiText[lang].closeLabels.consultant,
+      );
+  }
 
   if (elements.consultantModal.classList.contains("open")) {
     const openKey = elements.consultantModal.dataset.consultant;
@@ -1217,47 +1256,54 @@ function setLanguage(lang) {
     }
   }
 
-  if (elements.heroPoints.length) {
-    uiText[lang].heroPoints.forEach((text, index) => {
-      if (elements.heroPoints[index]) {
-        elements.heroPoints[index].textContent = text;
-      }
-    });
+  // Apply hero and nav translations only for EN
+  if (lang === "en") {
+    if (elements.heroPoints.length) {
+      uiText[lang].heroPoints.forEach((text, index) => {
+        if (elements.heroPoints[index]) {
+          elements.heroPoints[index].textContent = text;
+        }
+      });
+    }
+
+    if (elements.heroTalk)
+      elements.heroTalk.textContent = uiText[lang].heroTalk;
+
+    if (elements.heroExplore)
+      elements.heroExplore.textContent = uiText[lang].heroExplore;
+
+    // "Talk to us" stays in English permanently - don't translate
+
+    if (elements.navMission)
+      elements.navMission.textContent = uiText[lang].labels.mission;
+
+    if (elements.navExpertise)
+      elements.navExpertise.textContent = uiText[lang].labels.expertise;
+
+    if (elements.navConsultants)
+      elements.navConsultants.textContent = uiText[lang].labels.consultants;
+
+    if (elements.navReferences)
+      elements.navReferences.textContent = uiText[lang].labels.references;
+
+    if (elements.navContact)
+      elements.navContact.textContent = uiText[lang].labels.contact;
   }
 
-  if (elements.heroTalk) elements.heroTalk.textContent = uiText[lang].heroTalk;
+  // Apply remaining contact translations only for EN
+  if (lang === "en") {
+    if (elements.sectionIntro)
+      elements.sectionIntro.textContent = uiText[lang].sectionIntro;
 
-  if (elements.heroExplore)
-    elements.heroExplore.textContent = uiText[lang].heroExplore;
+    if (elements.contactHeading)
+      elements.contactHeading.textContent = uiText[lang].contactHeading;
 
-  if (elements.navTalk) elements.navTalk.textContent = uiText[lang].navTalk;
+    if (elements.contactText)
+      elements.contactText.textContent = uiText[lang].contactText;
 
-  if (elements.navMission)
-    elements.navMission.textContent = uiText[lang].labels.mission;
-
-  if (elements.navExpertise)
-    elements.navExpertise.textContent = uiText[lang].labels.expertise;
-
-  if (elements.navConsultants)
-    elements.navConsultants.textContent = uiText[lang].labels.consultants;
-
-  if (elements.navReferences)
-    elements.navReferences.textContent = uiText[lang].labels.references;
-
-  if (elements.navContact)
-    elements.navContact.textContent = uiText[lang].labels.contact;
-
-  if (elements.sectionIntro)
-    elements.sectionIntro.textContent = uiText[lang].sectionIntro;
-
-  if (elements.contactHeading)
-    elements.contactHeading.textContent = uiText[lang].contactHeading;
-
-  if (elements.contactText)
-    elements.contactText.textContent = uiText[lang].contactText;
-
-  if (elements.contactSubmit)
-    elements.contactSubmit.textContent = uiText[lang].contactSubmit;
+    if (elements.contactSubmit)
+      elements.contactSubmit.textContent = uiText[lang].contactSubmit;
+  }
 }
 
 function installEventHandlers() {
@@ -1337,6 +1383,51 @@ function installEventHandlers() {
 }
 
 function init() {
+  // Store original HTML text values for DE restoration
+  const textElements = [
+    "hero-eyebrow",
+    "hero-heading",
+    "mission-text",
+    "expertise-kicker",
+    "expertise-heading",
+    "expertise-intro",
+    "service-1-title",
+    "service-1-text",
+    "service-2-title",
+    "service-2-text",
+    "service-3-title",
+    "service-3-text",
+    "service-1-action",
+    "service-2-action",
+    "service-3-action",
+    "nav-expertise",
+    "nav-consultants",
+    "nav-references",
+    "nav-contact",
+    "consultants-kicker",
+    "consultants-heading",
+    "consultants-intro",
+    "references-kicker",
+    "references-heading",
+    "contact-kicker",
+    "contact-heading",
+    "contact-text",
+    "footer-imprint",
+    "footer-privacy",
+    "footer-top",
+  ];
+
+  textElements.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      state.originalTexts[id] = el.textContent;
+    }
+  });
+
+  // Set "Talk to us" to English permanently
+  if (elements.navTalk) elements.navTalk.textContent = "Talk to us";
+  if (elements.heroTalk) elements.heroTalk.textContent = "Talk to us now";
+
   installEventHandlers();
 
   setLanguage(state.lang);
