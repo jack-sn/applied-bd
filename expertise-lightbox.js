@@ -466,7 +466,6 @@ const uiText = {
 const state = {
   lang: "de",
   activeFactsheetProject: null,
-  originalTexts: {},
 };
 
 const availableFactsheetFiles = new Set([
@@ -1048,17 +1047,7 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  // Restore original HTML text values for DE
-  if (lang === "de") {
-    Object.keys(state.originalTexts).forEach((id) => {
-      const el = document.getElementById(id);
-      if (el && state.originalTexts[id]) {
-        el.textContent = state.originalTexts[id];
-      }
-    });
-  }
-
-  // Only apply EN translations - DE uses HTML defaults
+  // Only apply EN translations - DE uses HTML defaults as-is
   if (lang === "en") {
     if (elements.heroEyebrow) {
       elements.heroEyebrow.textContent = uiText[lang].heroEyebrow;
@@ -1383,47 +1372,6 @@ function installEventHandlers() {
 }
 
 function init() {
-  // Store original HTML text values for DE restoration
-  const textElements = [
-    "hero-eyebrow",
-    "hero-heading",
-    "mission-text",
-    "expertise-kicker",
-    "expertise-heading",
-    "expertise-intro",
-    "service-1-title",
-    "service-1-text",
-    "service-2-title",
-    "service-2-text",
-    "service-3-title",
-    "service-3-text",
-    "service-1-action",
-    "service-2-action",
-    "service-3-action",
-    "nav-expertise",
-    "nav-consultants",
-    "nav-references",
-    "nav-contact",
-    "consultants-kicker",
-    "consultants-heading",
-    "consultants-intro",
-    "references-kicker",
-    "references-heading",
-    "contact-kicker",
-    "contact-heading",
-    "contact-text",
-    "footer-imprint",
-    "footer-privacy",
-    "footer-top",
-  ];
-
-  textElements.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      state.originalTexts[id] = el.textContent;
-    }
-  });
-
   // Set "Talk to us" to English permanently
   if (elements.navTalk) elements.navTalk.textContent = "Talk to us";
   if (elements.heroTalk) elements.heroTalk.textContent = "Talk to us now";
