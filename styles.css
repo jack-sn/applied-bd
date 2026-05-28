@@ -102,7 +102,7 @@ ul {
 
 .container {
 
-    width: min(var(--container), calc(100% - 4rem));
+    width: min(var(--container), calc(100% - 7rem));
 
     margin: 0 auto;
 
@@ -358,13 +358,13 @@ ul {
 
     margin: 0 0 2.2rem;
 
-    font-size: clamp(2rem, 3vw, 4rem);
+    font-size: clamp(3rem, 4.5vw, 6rem);
 
-    line-height: 1.05;
+    line-height: 1.08;
 
-    font-weight: 900;
+    font-weight: 600;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
 
 
 
@@ -889,11 +889,11 @@ ul {
 
     text-align: center;
 
-    font-weight: 100;
+    font-weight: 200;
 
     margin: 0 0 1rem;
 
-    font-size: clamp(1.1rem, 2.5vw, 2.7rem);
+    font-size: clamp(1.4rem, 2.8vw, 3rem);
 
     line-height: 1.2;
 
@@ -907,7 +907,7 @@ ul {
 
     margin: 0 0 1rem;
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3.8vw, 3rem);
 
     line-height: 1.2;
 
