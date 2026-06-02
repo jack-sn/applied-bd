@@ -162,15 +162,7 @@ const uiText = {
     heroEyebrow: "The Consulting Boutique: applied business development",
 
     heroHeading:
-      "Business meets HR — We support your company in opening new markets and successfully implementing transformations — with international business and HR expertise as well as pragmatic leadership and implementation competence.",
-
-    heroPoints: [
-      "Strategic business development",
-
-      "Transformation & leadership alignment",
-
-      "HR excellence & talent development",
-    ],
+      "Business meets HR — We open new markets and guide your company safely through transformation — internationally experienced, pragmatic in implementation.",
 
     heroTalk: "Talk to us now",
 
@@ -184,7 +176,7 @@ const uiText = {
     navTalk: "Talk to us",
 
     missionText:
-      "Our mission is to position companies in terms of sales and leadership so that growth, new markets, transformation and HR truly work together — instead of running alongside each other. For this, we combine practical sales excellence, executive coaching and HR excellence into implementation-strong programs that directly address real projects, teams and customers.",
+      "Our mission is to position companies in sales, leadership and organization so that growth, transformation and HR truly work together — instead of running alongside each other.",
 
     expertiseKicker: "Our Expertise",
 
@@ -277,7 +269,7 @@ const uiText = {
     },
 
     sectionIntro:
-      "We turn practical expertise into business outcomes by matching leadership, market development and HR programs with measurable progress.",
+      "For this, we combine practical sales, coaching and modern HR work into implementation-strong programs that pragmatically address real projects. We particularly focus on sustainably strengthening international mid-sized companies.",
 
     expertiseOverview: "Expertise overview",
 
@@ -310,18 +302,10 @@ const uiText = {
   },
 
   de: {
-    heroEyebrow: "Die Beratungsboutique",
+    heroEyebrow: "Die Consulting-Boutique: applied business development",
 
     heroHeading:
-      "Business trifft HR — moderner Beratungs­partner für Wachstum, Transformation und Talententwicklung.",
-
-    heroPoints: [
-      "Strategische Geschäftsentwicklung",
-
-      "Transformation & Führungsausrichtung",
-
-      "HR-Exzellenz & Talententwicklung",
-    ],
+      "Business trifft HR – Wir erschließen neue Märkte und führen ihr Unternehmen sicher durch Transformation – international erfahren, pragmatisch in der Umsetzung.",
 
     heroTalk: "Jetzt sprechen",
 
@@ -335,7 +319,7 @@ const uiText = {
     navTalk: "Kontakt",
 
     missionText:
-      "Wir unterstützen Unternehmen mit pragmatischer Transformation: businessorientiertes Denken, menschenzentrierte Umsetzung und eine enge Verbindung von Strategie, Marktchancen und operativer Umsetzung — statt vager Versprechen liefern wir klare Ergebnisse, strukturierte Programme und messbaren Fortschritt.",
+      "Unsere Mission ist es, Unternehmen in Vertrieb, Führung und Organisation so aufzustellen, dass Wachstum, Transformation und HR wirklich zusammenpassen - statt nebeneinander herzulaufen.",
 
     expertiseKicker: "Unsere Expertise",
 
@@ -429,7 +413,7 @@ const uiText = {
     },
 
     sectionIntro:
-      "Wir setzen Erfahrung in messbare Ergebnisse um, indem wir Führung, Marktentwicklung und HR-Programme auf klare Ziele ausrichten.",
+      "Dafür kombinieren wir praxisnahe Sales, Coaching und moderne HR-Arbeit zu umsetzungsstarken Programmen, die pragmatisch an realen Projekten ansetzen. Besonders konzentrieren wir uns darauf, internationale Mittelständler nachhaltig zu stärken.",
 
     expertiseOverview: "Expertenwissen Übersicht",
 
@@ -670,8 +654,6 @@ const elements = {
   heroCardTitle: document.getElementById("hero-card-title"),
 
   heroCardText: document.getElementById("hero-card-text"),
-
-  heroPoints: document.querySelectorAll("#hero-points li"),
 
   heroTalk: document.getElementById("hero-talk"),
 
@@ -1247,14 +1229,6 @@ function setLanguage(lang) {
 
   // Apply hero and nav translations only for EN
   if (lang === "en") {
-    if (elements.heroPoints.length) {
-      uiText[lang].heroPoints.forEach((text, index) => {
-        if (elements.heroPoints[index]) {
-          elements.heroPoints[index].textContent = text;
-        }
-      });
-    }
-
     if (elements.heroTalk)
       elements.heroTalk.textContent = uiText[lang].heroTalk;
 

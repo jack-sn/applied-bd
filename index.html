@@ -31,6 +31,16 @@
   <body>
     <header class="site-header">
       <div class="container nav-row">
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
         <a href="#top" class="logo">
           <img
             src="images/applied-bd-logo.svg"
@@ -46,6 +56,36 @@
           <a href="#references" id="nav-references">Referenzen</a>
           <a href="#contact" id="nav-contact">Kontakt</a>
         </nav>
+        <div class="mobile-nav-dropdown" id="mobile-nav-dropdown">
+          <a href="#expertise" id="mobile-nav-expertise">Expertise</a>
+          <a href="#consultants" id="mobile-nav-consultants">Berater</a>
+          <a href="#references" id="mobile-nav-references">Referenzen</a>
+          <a href="#contact" id="mobile-nav-contact">Kontakt</a>
+          <div class="mobile-dropdown-actions">
+            <div class="lang-toggle" role="group" aria-label="Language toggle">
+              <button
+                class="btn btn-secondary btn-small lang-switch active"
+                data-lang="de"
+                type="button"
+              >
+                DE
+              </button>
+              <button
+                class="btn btn-secondary btn-small lang-switch"
+                data-lang="en"
+                type="button"
+              >
+                EN
+              </button>
+            </div>
+            <a
+              href="#contact"
+              class="btn btn-primary btn-small"
+              id="mobile-nav-talk"
+              >Sprechen wir uns</a
+            >
+          </div>
+        </div>
         <div class="header-actions">
           <div class="lang-toggle" role="group" aria-label="Language toggle">
             <button
@@ -71,7 +111,7 @@
     </header>
     <main id="top">
       <section class="hero">
-        <div class="containerhero">
+        <div class="container">
           <div class="hero-copy">
             <p class="eyebrow" id="hero-eyebrow">
               Die Consulting-Boutique: applied business development
@@ -79,7 +119,7 @@
             <h1 id="hero-heading">
               Business trifft HR – <br />
               Wir erschließen neue Märkte und führen ihr Unternehmen sicher
-              durch Transformation. – international erfahren, pragmatisch in der
+              durch Transformation – international erfahren, pragmatisch in der
               Umsetzung.
             </h1>
 
@@ -532,7 +572,37 @@
       </div>
     </footer>
 
-    <script src="display-detect.js"></script>
     <script src="expertise-lightbox.js"></script>
+    <script>
+      // Mobile menu toggle
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileNavDropdown = document.getElementById("mobile-nav-dropdown");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        const isExpanded =
+          mobileMenuToggle.getAttribute("aria-expanded") === "true";
+        mobileMenuToggle.setAttribute("aria-expanded", !isExpanded);
+        mobileNavDropdown.classList.toggle("open");
+      });
+
+      // Close mobile menu when clicking a link
+      mobileNavDropdown.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+          mobileNavDropdown.classList.remove("open");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenuToggle.contains(e.target) &&
+          !mobileNavDropdown.contains(e.target)
+        ) {
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+          mobileNavDropdown.classList.remove("open");
+        }
+      });
+    </script>
   </body>
 </html>
