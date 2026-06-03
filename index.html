@@ -78,7 +78,7 @@
               href="#contact"
               class="btn btn-primary btn-small"
               id="mobile-nav-talk"
-              >Sprechen wir uns</a
+              >Lass uns reden!</a
             >
           </div>
         </div>
@@ -539,12 +539,12 @@
             </div>
           </div>
 
-          <div data-fs-success class="form-success" style="display: none">
+          <div data-fs-success class="form-success">
             <p id="form-success-msg">
               Vielen Dank! Wir melden uns bald bei Ihnen.
             </p>
           </div>
-          <div data-fs-error class="form-error" style="display: none"></div>
+          <div data-fs-error class="form-error"></div>
 
           <form id="contact-form" class="contact-form">
             <div class="form-row">
@@ -607,6 +607,30 @@
       </section>
     </main>
 
+    <div
+      class="toast-error"
+      id="error-toast"
+      role="alert"
+      aria-live="assertive"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="10" cy="10" r="10" fill="currentColor" opacity="0.15" />
+        <path
+          d="M7 7l6 6M13 7l-6 6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <span id="error-toast-msg">Bitte alle Felder ausfüllen.</span>
+    </div>
+
     <div class="toast" id="submit-toast" role="status" aria-live="polite">
       <svg
         width="20"
@@ -638,17 +662,6 @@
       </div>
     </footer>
 
-    <script>
-      window.formspree =
-        window.formspree ||
-        function () {
-          (formspree.q = formspree.q || []).push(arguments);
-        };
-      formspree("initForm", {
-        formElement: "#contact-form",
-        formId: "mzdqplwv",
-      });
-    </script>
     <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="js/expertise-lightbox.js"></script>
     <script>
@@ -671,28 +684,92 @@
         });
       });
 
-      // Success toast on form submission
+      // Formspree init + success toast + button feedback
       (function () {
-        const form = document.getElementById("contact-form");
         const toast = document.getElementById("submit-toast");
         const toastMsg = document.getElementById("toast-msg");
+        const errorToast = document.getElementById("error-toast");
+        const errorToastMsg = document.getElementById("error-toast-msg");
+        const successDiv = document.querySelector("[data-fs-success]");
+        const errorDiv = document.querySelector("[data-fs-error]");
+        const submitBtn = document.getElementById("contact-submit");
         let toastTimer;
+        let btnTimer;
+        let errorTimer;
+
+        function showErrorToast(msg) {
+          const lang =
+            document.querySelector(".lang-switch.active")?.dataset.lang || "de";
+          errorToastMsg.textContent =
+            msg ||
+            (lang === "en"
+              ? "Please fill in all fields."
+              : "Bitte alle Felder ausfüllen.");
+          errorToast.classList.add("toast-error--visible");
+          clearTimeout(errorTimer);
+          errorTimer = setTimeout(
+            () => errorToast.classList.remove("toast-error--visible"),
+            4000,
+          );
+        }
+
+        if (errorToast) {
+          errorToast.addEventListener("click", () => {
+            clearTimeout(errorTimer);
+            errorToast.classList.remove("toast-error--visible");
+          });
+        }
+
+        // Watch for Formspree setting data-fs-active on the error div
+        if (errorDiv) {
+          new MutationObserver((mutations) => {
+            mutations.forEach((m) => {
+              if (
+                m.type === "attributes" &&
+                m.attributeName === "data-fs-active" &&
+                errorDiv.hasAttribute("data-fs-active")
+              ) {
+                showErrorToast(errorDiv.textContent.trim());
+                errorDiv.removeAttribute("data-fs-active");
+              }
+            });
+          }).observe(errorDiv, {
+            attributes: true,
+            attributeFilter: ["data-fs-active"],
+          });
+        }
 
         function showToast() {
           const lang =
             document.querySelector(".lang-switch.active")?.dataset.lang || "de";
-          toastMsg.textContent =
+          const successText =
             lang === "en" ? "Message sent!" : "Nachricht gesendet!";
+
+          // Toast
+          toastMsg.textContent = successText;
           toast.classList.add("toast--visible");
           clearTimeout(toastTimer);
           toastTimer = setTimeout(
             () => toast.classList.remove("toast--visible"),
             4000,
           );
-        }
 
-        if (form) {
-          form.addEventListener("fs:success", showToast);
+          // Button feedback
+          if (submitBtn) {
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = successText;
+            submitBtn.disabled = true;
+            clearTimeout(btnTimer);
+            btnTimer = setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            }, 4000);
+          }
+
+          // Keep success div hidden – button handles the feedback
+          if (successDiv && successDiv.hasAttribute("data-fs-active")) {
+            successDiv.removeAttribute("data-fs-active");
+          }
         }
 
         if (toast) {
@@ -701,6 +778,34 @@
             toast.classList.remove("toast--visible");
           });
         }
+
+        // Watch for Formspree setting data-fs-active on the success div
+        if (successDiv) {
+          new MutationObserver((mutations) => {
+            mutations.forEach((m) => {
+              if (
+                m.type === "attributes" &&
+                m.attributeName === "data-fs-active" &&
+                successDiv.hasAttribute("data-fs-active")
+              ) {
+                showToast();
+              }
+            });
+          }).observe(successDiv, {
+            attributes: true,
+            attributeFilter: ["data-fs-active"],
+          });
+        }
+
+        // Init Formspree after library loads
+        window.addEventListener("load", function () {
+          if (typeof formspree === "function") {
+            formspree("initForm", {
+              formElement: "#contact-form",
+              formId: "mzdqplwv",
+            });
+          }
+        });
       })();
 
       // Close mobile menu when clicking outside
