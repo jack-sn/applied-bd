@@ -271,6 +271,8 @@ const uiText = {
 
     contactSubmit: "Send message",
 
+    formSuccessMsg: "Thank you! We'll be in touch soon.",
+
     labels: {
       mission: "Mission",
 
@@ -415,6 +417,8 @@ const uiText = {
       "Senden Sie eine Nachricht oder rufen Sie an, damit wir Sie besser kennenlernen können.",
 
     contactSubmit: "Nachricht senden",
+
+    formSuccessMsg: "Vielen Dank! Wir melden uns bald bei Ihnen.",
 
     labels: {
       mission: "Mission",
@@ -1273,6 +1277,9 @@ function setLanguage(lang) {
 
     if (elements.contactSubmit)
       elements.contactSubmit.textContent = uiText[lang].contactSubmit;
+
+    const successMsg = document.getElementById("form-success-msg");
+    if (successMsg) successMsg.textContent = uiText[lang].formSuccessMsg;
   }
 }
 

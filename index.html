@@ -539,28 +539,46 @@
             </div>
           </div>
 
-          <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID from formspree.io -->
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-          >
+          <div data-fs-success class="form-success" style="display: none">
+            <p id="form-success-msg">
+              Vielen Dank! Wir melden uns bald bei Ihnen.
+            </p>
+          </div>
+          <div data-fs-error class="form-error" style="display: none"></div>
+
+          <form id="contact-form" class="contact-form">
             <div class="form-row">
               <label for="name" id="form-name-label">Name</label>
-              <input id="name" type="text" placeholder="Ihr Name" />
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ihr Name"
+                data-fs-field
+              />
+              <span data-fs-error="name" class="field-error"></span>
             </div>
 
             <div class="form-row">
               <label for="email" id="form-email-label">E-Mail</label>
-              <input id="email" type="email" placeholder="ihre@email.com" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="ihre@email.com"
+                data-fs-field
+              />
+              <span data-fs-error="email" class="field-error"></span>
             </div>
 
             <div class="form-row">
               <label for="subject" id="form-subject-label">Betreff</label>
               <input
                 id="subject"
+                name="subject"
                 type="text"
                 placeholder="Wie können wir helfen?"
+                data-fs-field
               />
             </div>
 
@@ -568,15 +586,19 @@
               <label for="message" id="form-message-label">Nachricht</label>
               <textarea
                 id="message"
+                name="message"
                 rows="6"
                 placeholder="Schreiben Sie Ihre Nachricht hier..."
+                data-fs-field
               ></textarea>
+              <span data-fs-error="message" class="field-error"></span>
             </div>
 
             <button
               id="contact-submit"
               type="submit"
               class="btn btn-primary full-width"
+              data-fs-submit-btn
             >
               Nachricht senden
             </button>
@@ -596,6 +618,18 @@
       </div>
     </footer>
 
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree("initForm", {
+        formElement: "#contact-form",
+        formId: "xrevzwrz",
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="js/expertise-lightbox.js"></script>
     <script>
       // Mobile menu toggle
