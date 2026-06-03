@@ -301,7 +301,7 @@ const uiText = {
 
     expertiseKicker: "Unsere Expertise",
 
-    expertiseHeading: "Drei starke Leistungsbereiche mit Raum zum Skalieren.",
+    expertiseHeading: "Unsere Expertise,<br /> Ihr Nutzen!",
 
     serviceAction: "Mehr erfahren",
 
