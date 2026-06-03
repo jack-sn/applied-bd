@@ -1338,15 +1338,61 @@ ul {
 
 }
 
+.factsheet-header-actions {
 
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.factsheet-back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.35rem;
+
+    padding: 0.26rem 0.65rem;
+
+    border: 1px solid var(--line);
+
+    border-radius: 999px;
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+
+    color: var(--muted);
+
+    background: color-mix(in srgb, var(--surface) 86%, #ffffff 14%);
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+.factsheet-back-btn:hover {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+}
 
 .factsheet-language-toggle {
 
     display: inline-flex;
 
     gap: 0.35rem;
-
-    justify-self: end;
 
     padding: 0.25rem;
 

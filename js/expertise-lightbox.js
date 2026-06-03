@@ -14,10 +14,7 @@ const expertiseData = {
           title: "Strategic Leadership Alignment",
           file: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
         },
-        {
-          title: "Efficiency and Strength in Closing",
-          file: "fact-sheets-html/fact-sheet-applied-bd-efficiency-and-strength-in-closing-en.html",
-        },
+
         {
           title: "Executive Coaching",
           file: "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
@@ -29,17 +26,14 @@ const expertiseData = {
       ],
       de: [
         {
-          title: "Führungskräfte-Coaching",
+          title: "Executive-Coaching",
           file: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
         },
         {
           title: "Strategische Führungsausrichtung",
           file: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-de.html",
         },
-        {
-          title: "Interne Effizienz und vertriebliche Abschlußstärke",
-          file: "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
-        },
+
         {
           title: "High Engagement Race",
           file: "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
@@ -90,17 +84,22 @@ const expertiseData = {
           file: "fact-sheets-html/fact-sheet-vertriebspotential-analyse-de.html",
         },
         {
-          title:
-            "Verbesserung Ihrer Verkaufschancen in aktuellen B2B-Vertriebsprojekten WCS",
-          file: "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
-        },
-        {
           title: "Eigene Wirkung auf Kunden steigern",
           file: "fact-sheets-html/fact-sheet-applied-bd-eigene-wirkung-auf-kunden-steigern-de.html",
         },
         {
+          title: "Interne Effizienz und vertriebliche Abschlußstärke",
+          file: "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
+        },
+
+        {
           title: "Solution Selling Skills in der Messebranche",
           file: "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-de.html",
+        },
+        {
+          title:
+            "Verbesserung Ihrer Verkaufschancen in aktuellen B2B-Vertriebsprojekten WCS",
+          file: "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
         },
       ],
     },
@@ -242,6 +241,8 @@ const uiText = {
       factsheet: "Back",
       consultant: "Close consultant profile",
     },
+
+    back: "Back",
 
     sectionIntro:
       "For this, we combine practical sales, coaching and modern HR work into implementation-strong programs that pragmatically address real projects. We particularly focus on sustainably strengthening international mid-sized companies.",
@@ -389,6 +390,8 @@ const uiText = {
       consultant: "Beraterprofil schließen",
     },
 
+    back: "Zurück",
+
     sectionIntro:
       "Dafür kombinieren wir praxisnahe Sales, Coaching und moderne HR-Arbeit zu umsetzungsstarken Programmen, die pragmatisch an realen Projekten ansetzen. Besonders konzentrieren wir uns darauf, internationale Mittelständler nachhaltig zu stärken.",
 
@@ -429,6 +432,7 @@ const uiText = {
 const state = {
   lang: "de",
   activeFactsheetProject: null,
+  activeExpertise: null,
 };
 
 const availableFactsheetFiles = new Set([
@@ -776,6 +780,7 @@ function renderModal(expertiseKey) {
     return;
   }
 
+  state.activeExpertise = expertiseKey;
   const language = state.lang;
 
   const title = expertise.title[language] || expertise.title.en;
@@ -873,9 +878,14 @@ function openFactsheet(project, preferredLang = state.lang) {
 
     .then((html) => {
       elements.factsheetContent.innerHTML = `
-        <div class="factsheet-language-toggle" role="group" aria-label="${uiText[state.lang].factsheetLanguageToggleAria}">
-          <button type="button" class="factsheet-lang-btn ${requestedLang === "en" ? "active" : ""}" data-factsheet-lang="en">EN</button>
-          <button type="button" class="factsheet-lang-btn ${requestedLang === "de" ? "active" : ""}" data-factsheet-lang="de">DE</button>
+        <div class="factsheet-header-actions">
+          <button type="button" class="factsheet-back-btn" data-close="factsheet" aria-label="${uiText[state.lang].closeLabels.factsheet}">
+            &#8249; ${uiText[state.lang].back}
+          </button>
+          <div class="factsheet-language-toggle" role="group" aria-label="${uiText[state.lang].factsheetLanguageToggleAria}">
+            <button type="button" class="factsheet-lang-btn ${state.lang === "en" ? "active" : ""}" data-factsheet-lang="en">EN</button>
+            <button type="button" class="factsheet-lang-btn ${state.lang === "de" ? "active" : ""}" data-factsheet-lang="de">DE</button>
+          </div>
         </div>
         <div class="factsheet-language-content">${html}</div>
       `;
@@ -885,10 +895,7 @@ function openFactsheet(project, preferredLang = state.lang) {
         .forEach((button) => {
           button.addEventListener("click", () => {
             const nextLang = button.dataset.factsheetLang;
-            if (!state.activeFactsheetProject || !nextLang) {
-              return;
-            }
-            openFactsheet(state.activeFactsheetProject, nextLang);
+            setLanguage(nextLang);
           });
         });
 
@@ -943,6 +950,8 @@ function closeModal() {
   elements.modal.classList.remove("split-layout");
 
   elements.modal.setAttribute("aria-hidden", "true");
+
+  state.activeExpertise = null;
 
   syncBodyOverflow();
 }
@@ -1033,17 +1042,21 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  // DE = HTML is source of truth, never touch the DOM
-  // Only reload when switching back from EN, not on initial load
-  if (lang === "de") {
-    if (prevLang === "en") {
-      location.reload();
-    }
-    return;
+  // Reload fact sheet if it's open when language changes
+  if (
+    state.activeFactsheetProject &&
+    elements.factsheetModal.classList.contains("open")
+  ) {
+    openFactsheet(state.activeFactsheetProject, lang);
   }
 
-  // EN only below
-  const t = uiText.en;
+  // Re-render expertise modal if it's open when language changes
+  if (state.activeExpertise && elements.modal.classList.contains("open")) {
+    renderModal(state.activeExpertise);
+  }
+
+  // Use uiText[lang] for both DE and EN (dynamic translation)
+  const t = uiText[lang];
 
   if (elements.heroEyebrow) elements.heroEyebrow.textContent = t.heroEyebrow;
   if (elements.heroHeading) elements.heroHeading.innerHTML = t.heroHeading;
@@ -1061,21 +1074,21 @@ function setLanguage(lang) {
 
   if (elements.service1Title)
     elements.service1Title.textContent =
-      expertiseData["business-transformation"].title.en;
+      expertiseData["business-transformation"].title[lang];
   if (elements.service1Text)
     elements.service1Text.textContent =
-      expertiseData["business-transformation"].description.en;
+      expertiseData["business-transformation"].description[lang];
   if (elements.service2Title)
     elements.service2Title.textContent =
-      expertiseData["growth-market-development"].title.en;
+      expertiseData["growth-market-development"].title[lang];
   if (elements.service2Text)
     elements.service2Text.textContent =
-      expertiseData["growth-market-development"].description.en;
+      expertiseData["growth-market-development"].description[lang];
   if (elements.service3Title)
     elements.service3Title.textContent = t.service3Title;
   if (elements.service3Text)
     elements.service3Text.textContent =
-      expertiseData["hr-excellence"].description.en;
+      expertiseData["hr-excellence"].description[lang];
 
   if (elements.service1Action)
     elements.service1Action.textContent = t.serviceAction;

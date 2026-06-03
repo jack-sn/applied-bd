@@ -1,6 +1,6 @@
 .venv/
 applied-bd-dev/
-Fact Sheets/
+
 convert_fact_sheets.py
 convert_docx_fact_sheets.py
 update_fact_sheet_paths.py

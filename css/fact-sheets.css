@@ -78,7 +78,99 @@
     color: #b7238a;
     font-size: 17px;
     font-weight: 600;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+}
+
+/* Mammoth-generated HTML styling */
+.fc-content>p:first-child>strong {
+    display: block;
+    color: #b7238a;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.fc-content>p:nth-child(2)>strong {
+    display: block;
+    color: #b7238a;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.fc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.fc-content table tr {
+    vertical-align: top;
+}
+
+.fc-content table td {
+    padding: 12px 0;
+    vertical-align: top;
+}
+
+.fc-content table td:first-child {
+    width: 190px;
+    color: #b7238a;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.fc-content table td:last-child {
+    color: #4d4d4d;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.fc-content p {
+    margin: 0 0 12px 0;
+}
+
+.fc-content p:last-child {
+    margin-bottom: 0;
+}
+
+.fc-content p strong {
+    color: #b7238a;
+    font-weight: 600;
+}
+
+.fc-content .fc-list-strong {
+    font-weight: 400;
+}
+
+.fc-content .fc-table-label-strong {
+    font-weight: 400;
+}
+
+.fc-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fc-content ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 6px;
+}
+
+.fc-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+.fc-content ul li::before {
+    content: "▪";
+    color: #b7238a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 13px;
 }
 
 /* Section rows */
