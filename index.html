@@ -607,6 +607,26 @@
       </section>
     </main>
 
+    <div class="toast" id="submit-toast" role="status" aria-live="polite">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="10" cy="10" r="10" fill="currentColor" opacity="0.15" />
+        <path
+          d="M5.5 10.5l3 3 6-6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span id="toast-msg">Nachricht gesendet!</span>
+    </div>
+
     <footer class="site-footer">
       <div class="container footer-row">
         <p id="footer-copy">© 2026 Applied Business Development</p>
@@ -650,6 +670,38 @@
           mobileNavDropdown.classList.remove("open");
         });
       });
+
+      // Success toast on form submission
+      (function () {
+        const form = document.getElementById("contact-form");
+        const toast = document.getElementById("submit-toast");
+        const toastMsg = document.getElementById("toast-msg");
+        let toastTimer;
+
+        function showToast() {
+          const lang =
+            document.querySelector(".lang-switch.active")?.dataset.lang || "de";
+          toastMsg.textContent =
+            lang === "en" ? "Message sent!" : "Nachricht gesendet!";
+          toast.classList.add("toast--visible");
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(
+            () => toast.classList.remove("toast--visible"),
+            4000,
+          );
+        }
+
+        if (form) {
+          form.addEventListener("fs:success", showToast);
+        }
+
+        if (toast) {
+          toast.addEventListener("click", () => {
+            clearTimeout(toastTimer);
+            toast.classList.remove("toast--visible");
+          });
+        }
+      })();
 
       // Close mobile menu when clicking outside
       document.addEventListener("click", (e) => {
