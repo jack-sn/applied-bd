@@ -642,7 +642,7 @@ ul {
 
     color: var(--muted);
 
-    font-size: 1.04rem;
+    font-size: 1.1rem;
 
     margin: 0;
 
@@ -723,6 +723,7 @@ ul {
     grid-auto-rows: auto;
 
     gap: 1.3rem;
+
 
 }
 
@@ -917,57 +918,7 @@ ul {
 
 
 
-/* Split layout when factsheet is also open */
-
-.expertise-modal.open.split-layout {
-
-    justify-content: flex-start;
-
-    padding: 1.5rem 0 1.5rem 1.5rem;
-
-    gap: 2rem;
-
-    pointer-events: none;
-
-}
-
-
-
-.expertise-modal.open.split-layout .expertise-modal-backdrop {
-
-    pointer-events: auto;
-
-}
-
-
-
-.expertise-modal.open.split-layout .expertise-modal-panel {
-
-    width: 25%;
-
-    max-width: none;
-
-    pointer-events: auto;
-
-    border-radius: 28px;
-
-    box-shadow: none;
-
-    height: calc(100vh - 3rem);
-
-    max-height: none;
-
-}
-
-
-
-.expertise-modal.open.split-layout .modal-content,
-
-.expertise-modal.open.split-layout .modal-content * {
-
-    text-align: left;
-
-}
+/* Split-layout rules live in the consolidated grid section at end of file */
 
 
 
@@ -1063,7 +1014,7 @@ ul {
 
     font-size: 1.02rem;
 
-    font-weight: 700;
+    font-weight: 500;
 
     border-radius: 0;
 
@@ -1096,10 +1047,6 @@ ul {
     color: var(--primary);
 
     text-decoration: underline;
-
-    outline: 2px solid color-mix(in srgb, var(--primary) 40%, white 60%);
-
-    outline-offset: 2px;
 
 }
 
@@ -1337,47 +1284,7 @@ ul {
 
 
 
-/* Split layout for side-by-side display */
-
-.factsheet-modal.open.split-layout {
-
-    left: 25%;
-
-    padding: 1.5rem 1.5rem 1.5rem 2rem;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: none;
-
-}
-
-
-
-.factsheet-modal.open.split-layout .factsheet-modal-backdrop {
-
-    display: none;
-
-}
-
-
-
-.factsheet-modal.open.split-layout .factsheet-modal-panel {
-
-    width: 100%;
-
-    height: calc(100vh - 3rem);
-
-    max-width: none;
-
-    border-radius: 28px;
-
-    box-shadow: none;
-
-    animation: slideInUp 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-}
+/* Split-layout rules live in the consolidated grid section at end of file */
 
 
 
@@ -2426,12 +2333,20 @@ ul {
 
 /* Small phones (up to 375px) */
 @media (max-width: 375px) {
-    .container {
-        width: calc(100% - 2rem);
+    :root {
+        --container: 100%
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 4vw, 4rem);
+    }
+
+    .eyebrow {
+        font-size: clamp(.5rem, .75rem, 1rem);
+    }
+
+    .hero-copy {
+        max-width: 80%;
     }
 
     .section-heading h2 {
@@ -2453,12 +2368,88 @@ ul {
     .header-actions {
         display: none;
     }
+
+    /* Header adjustments */
+    .nav-row {
+        min-height: 64px;
+    }
+
+    .logo-img {
+        max-height: 34px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: 1.4rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Consultants */
+    .consultants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consultant-card {
+        grid-template-columns: 80px 1fr;
+        padding: 1.2rem;
+    }
+
+    .consultant-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+    }
+
+    .consultant-content h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 0.95rem;
+    }
+
+    /* Section padding */
+    .section,
+    .hero {
+        padding: 3rem 0;
+    }
+
+    #mission {
+        padding: 5rem 0;
+    }
 }
 
 /* Phones (376px - 480px) */
 @media (min-width: 376px) and (max-width: 480px) {
+    :root {
+        --container: 100%
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 4vw, 4rem);
+    }
+
+    .eyebrow {
+        font-size: clamp(.5rem, .75rem, 1rem);
+    }
+
+    .hero-copy {
+        max-width: 80%;
     }
 
     .mobile-menu-toggle {
@@ -2472,12 +2463,97 @@ ul {
     .header-actions {
         display: none;
     }
+
+    /* Header */
+    .nav-row {
+        min-height: 68px;
+    }
+
+    .logo-img {
+        max-height: 36px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.85rem 1.15rem;
+        font-size: 0.92rem;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Consultants */
+    .consultants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consultant-card {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .consultant-avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 0.98rem;
+    }
+
+    /* Sections */
+    .section,
+    .hero {
+        padding: 3.5rem 0;
+    }
+
+    #mission {
+        padding: 6rem 0;
+    }
 }
 
 /* Phone horizontal / Small tablets (481px - 640px) */
 @media (min-width: 481px) and (max-width: 640px) {
+    :root {
+        --container: 100%
+    }
+
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: clamp(1.5rem, 4vw, 4rem);
+    }
+
+    .eyebrow {
+        font-size: clamp(.5rem, .75rem, 1rem);
+    }
+
+    .hero-copy {
+        max-width: 80%;
+    }
+
+    /* Header */
+    .nav-row {
+        min-height: 70px;
+    }
+
+    /* Buttons */
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+
+    /* Service cards */
+    .service-card h3 {
+        font-size: 1.6rem;
     }
 
     .consultants-grid {
@@ -2491,12 +2567,43 @@ ul {
     .main-nav {
         display: none;
     }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .section,
+    .hero {
+        padding: 4rem 0;
+    }
+
+    #mission {
+        padding: 7rem 0;
+    }
 }
 
 /* Tablets (641px - 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;
+    }
+
+    :root {
+        --container: 100%
+    }
+
+    .hero h1 {
+        font-size: clamp(1.8rem, 4vw, 4rem);
+    }
+
+    .eyebrow {
+        font-size: clamp(.55rem, .8rem, 1rem);
+    }
+
+    .hero-copy {
+        max-width: 80%;
     }
 
     .main-nav {
@@ -2506,6 +2613,7 @@ ul {
     .expertise-layout {
         grid-template-columns: 1fr;
     }
+
 
     .consultant-card {
         grid-template-columns: 1fr;
@@ -2519,6 +2627,20 @@ ul {
     .section,
     .hero {
         padding: 4rem 0;
+    }
+
+    #mission {
+        padding: 7rem 0;
+    }
+
+    /* Consultants grid - force 1 column */
+    .consultants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 1rem;
     }
 
     .consultant-modal-bottom-row {
@@ -2547,10 +2669,31 @@ ul {
     .consultant-modal-columns {
         grid-template-columns: 1fr;
     }
+
+    /* Service cards */
+    .service-card h3 {
+        font-size: 1.7rem;
+    }
 }
 
 /* Small laptops / Large tablets (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --container: 100%
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 4vw, 4rem);
+    }
+
+    .eyebrow {
+        font-size: clamp(.6rem, .85rem, 1rem);
+    }
+
+    .hero-copy {
+        max-width: 80%;
+    }
+
     .expertise-layout {
         grid-template-columns: 1fr;
     }
@@ -2578,12 +2721,34 @@ ul {
     .main-nav {
         display: none;
     }
+
+    /* Service cards */
+    .service-card h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 1.02rem;
+    }
+
+    #mission {
+        padding: 8rem 0;
+    }
 }
 
 /* Laptops (1025px - 1280px) */
 @media (min-width: 1025px) and (max-width: 1280px) {
     :root {
-        --container: 1000px;
+        --container: 100%
+    }
+
+    .hero-copy {
+        max-width: 80%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 3.3vw, 4.5rem);
     }
 
     .expertise-layout {
@@ -2594,18 +2759,28 @@ ul {
 /* Desktops / Larger laptops (1281px - 1440px) */
 @media (min-width: 1281px) and (max-width: 1440px) {
     :root {
-        --container: 1100px;
+        --container: 100%
+    }
+
+    .hero-copy {
+        max-width: 80%;
     }
 }
 
 /* Big external screens (1441px - 1920px) */
 @media (min-width: 1441px) and (max-width: 1920px) {
     :root {
-        --container: 1180px;
+        --container: 100%
     }
 
+    .hero-copy {
+        max-width: 80%;
+    }
+
+
+
     .hero h1 {
-        font-size: clamp(3.5rem, 5vw, 5.5rem);
+        font-size: clamp(3rem, 4vw, 5.5rem);
     }
 
     .section-heading h2 {
@@ -2616,16 +2791,22 @@ ul {
 /* Ultra-wide / 4K (1921px and up) */
 @media (min-width: 1921px) {
     :root {
-        --container: 1400px;
+        --container: 100%
+    }
+
+    .hero-copy {
+        max-width: 85%;
     }
 
     .hero h1 {
-        font-size: clamp(4rem, 5.5vw, 6.5rem);
+        font-size: clamp(3rem, 4.3vw, 5.5rem);
     }
 
     .section-heading h2 {
         font-size: clamp(2.5rem, 4vw, 3.5rem);
     }
+
+
 
     .services-grid h2 {
         font-size: clamp(1.8rem, 3vw, 3.2rem);
@@ -2671,6 +2852,10 @@ ul {
         padding: 3rem 0;
     }
 
+    #mission {
+        padding: 5rem 0;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -2686,5 +2871,128 @@ ul {
     .avatar-placeholder {
         width: 100%;
         height: 180px;
+    }
+
+    /* Header adjustments */
+    .nav-row {
+        min-height: 64px;
+    }
+
+    .logo-img {
+        max-height: 34px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: 1.4rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Consultant cards */
+    .consultant-card {
+        grid-template-columns: 80px 1fr;
+        padding: 1.2rem;
+    }
+
+    .consultant-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+    }
+
+    .consultant-content h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Section intro text */
+    .section-intro {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   SPLIT-LAYOUT GRID (Expertise + Factsheet)
+   When a fact sheet is open, both modals share one
+   grid overlay (.modal-stack). Desktop: two columns
+   (side-by-side). Mobile: two rows (stacked).
+   The modals become plain grid items; the wrapper
+   handles positioning and the shared backdrop.
+   ============================================ */
+
+/* Grid wrapper activates only while a fact sheet is open */
+.modal-stack:has(.factsheet-modal.split-layout) {
+    position: fixed;
+    inset: 0;
+    z-index: 2001;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+/* Modals become grid items instead of full-screen fixed overlays */
+.modal-stack:has(.factsheet-modal.split-layout) .expertise-modal.split-layout,
+.modal-stack:has(.factsheet-modal.split-layout) .factsheet-modal.split-layout {
+    position: static;
+    inset: auto;
+    left: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+    background: none;
+    pointer-events: auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* The per-modal backdrops are replaced by the wrapper background */
+.modal-stack:has(.factsheet-modal.split-layout) .expertise-modal-backdrop,
+.modal-stack:has(.factsheet-modal.split-layout) .factsheet-modal-backdrop {
+    display: none;
+}
+
+/* Panels fill their grid cell */
+.modal-stack:has(.factsheet-modal.split-layout) .expertise-modal-panel,
+.modal-stack:has(.factsheet-modal.split-layout) .factsheet-modal-panel {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 24px;
+    box-shadow: none;
+    overflow: auto;
+}
+
+/* Left column text alignment for the expertise panel */
+.modal-stack:has(.factsheet-modal.split-layout) .modal-content,
+.modal-stack:has(.factsheet-modal.split-layout) .modal-content * {
+    text-align: left;
+}
+
+/* Tablet and below: stack into two rows instead of two columns */
+@media (max-width: 1024px) {
+    .modal-stack:has(.factsheet-modal.split-layout) {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 40vh) minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
 }

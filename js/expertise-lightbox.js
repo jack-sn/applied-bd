@@ -2,42 +2,47 @@ const expertiseData = {
   "business-transformation": {
     title: {
       en: "Strategic Alignment & Leadership Strength",
-
       de: "Strategische Ausrichtung & Führungsstärke",
     },
-
     description: {
       en: "We consistently align business strategy, management team and executives for growth, sales success and successful transformation — complemented by executive coaching and engagement workshops for your leadership team.",
-
       de: "Wir richten Geschäftsstrategie, Management-Team und Führungskräfte konsequent auf Wachstum, Vertriebserfolg und erfolgreiche Transformation aus – ergänzt durch Executive Coaching und Engagement-Workshops für Ihr Führungsteam.",
     },
-
     projects: {
       en: [
         {
           title: "Strategic Leadership Alignment",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
         },
-
         {
           title: "Efficiency and Strength in Closing",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-efficiency-and-strength-in-closing-en.html",
         },
+        {
+          title: "Executive Coaching",
+          file: "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
+        },
+        {
+          title: "High Engagement Race",
+          file: "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
+        },
       ],
-
       de: [
         {
+          title: "Führungskräfte-Coaching",
+          file: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
+        },
+        {
+          title: "Strategische Führungsausrichtung",
+          file: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-de.html",
+        },
+        {
           title: "Interne Effizienz und vertriebliche Abschlußstärke",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
         },
-
         {
-          title: "Führungskräfte-Coaching",
-
-          file: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
+          title: "High Engagement Race",
+          file: "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
         },
       ],
     },
@@ -46,61 +51,56 @@ const expertiseData = {
   "growth-market-development": {
     title: {
       en: "New Markets and Sales Performance",
-
       de: "Neue Märkte und Sales-Performance",
     },
-
     description: {
       en: "We support you in market entry and business expansion in Germany and Europe — from market and competitive analysis to practical company formation. At the same time, we increase your closing strength through analyses of your sales potential, deal workshops and training to enhance effectiveness in direct customer contact.",
-
       de: "Wir unterstützen Sie beim Markteintritt und Geschäftsausbau in Deutschland und Europa – von der Markt- und Wettbewerbsanalyse bis hin zur praktischen Unternehmensgründung. Gleichzeitig steigern wir Ihre Abschlussstärke durch Analysen Ihres Vertriebspotenzials, Deal Workshops und Trainings zur Wirkungssteigerung im direkten Kundenkontakt.",
     },
-
     projects: {
       en: [
         {
           title: "Business Matching at Tradeshows",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-en.html",
         },
-
         {
           title: "Sales Potential Analysis",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-sales-potential-analysis-en.html",
         },
-
         {
           title: "Increasing Customer Impact",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-increasing-customer-impact-en.html",
         },
-
         {
           title: "Solution Selling Skills in the Exhibition Industry",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-en.html",
         },
+        {
+          title: "WCS Training",
+          file: "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
+        },
       ],
-
       de: [
         {
+          title: "Business Matching auf Fachmessen",
+          file: "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-de.html",
+        },
+        {
           title: "Vertriebspotential-Analyse",
-
           file: "fact-sheets-html/fact-sheet-vertriebspotential-analyse-de.html",
         },
-
         {
           title:
             "Verbesserung Ihrer Verkaufschancen in aktuellen B2B-Vertriebsprojekten WCS",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
         },
-
         {
           title: "Eigene Wirkung auf Kunden steigern",
-
           file: "fact-sheets-html/fact-sheet-applied-bd-eigene-wirkung-auf-kunden-steigern-de.html",
+        },
+        {
+          title: "Solution Selling Skills in der Messebranche",
+          file: "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-de.html",
         },
       ],
     },
@@ -109,47 +109,30 @@ const expertiseData = {
   "hr-excellence": {
     title: {
       en: "HR Excellence for Transformation & Engagement",
-
       de: "HR Excellence für Transformation & Engagement",
     },
-
     description: {
       en: "We make your HR organization a driver of business transformation, link your HR instruments with corporate goals and develop an actionable implementation plan with clear KPIs. This includes professional recruiting, onboarding and growth-oriented performance management. We also offer interim HR leadership when you need professional support at short notice.",
-
       de: "Wir machen Ihre HR Organisation zum Treiber der Business Transformation, verknüpfen Ihre HR Instrumente mit den Unternehmenszielen und entwickeln einen umsetzbaren Implementierungsplan mit klaren KPIs. Dazu gehören professionelles Recruiting, Onboarding und wachstumsorientiertes Performance Management. Wir bieten zudem Interim HR Führung, wenn Sie kurzfristig professionelle Unterstützung brauchen.",
     },
-
     projects: {
       en: [
         {
-          title: "WCS Training",
-
-          file: "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
-        },
-
-        {
-          title: "Executive Coaching",
-
-          file: "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
-        },
-
-        {
           title: "HR Factsheet",
-
           file: "fact-sheets-html/hr-factsheet-en.html",
         },
-
         {
           title: "High Engagement Race",
-
           file: "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
         },
       ],
-
       de: [
         {
+          title: "HR Factsheet",
+          file: "fact-sheets-html/hr-factsheet-de.html",
+        },
+        {
           title: "High Engagement Race",
-
           file: "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
         },
       ],
@@ -454,13 +437,16 @@ const state = {
 
 const availableFactsheetFiles = new Set([
   "fact-sheets-html/hr-factsheet-en.html",
+  "fact-sheets-html/hr-factsheet-de.html",
   "fact-sheets-html/fact-sheet-hr-factsheet-en.html",
   "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
   "fact-sheets-html/fact-sheet-high-engagement-race-de.html",
   "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
   "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
   "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-de.html",
   "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-de.html",
   "fact-sheets-html/fact-sheet-applied-bd-sales-potential-analysis-en.html",
   "fact-sheets-html/fact-sheet-vertriebspotential-analyse-de.html",
   "fact-sheets-html/fact-sheet-applied-bd-increasing-customer-impact-en.html",
@@ -469,18 +455,22 @@ const availableFactsheetFiles = new Set([
   "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
   "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
   "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
-  "fact-sheets-html/fact-sheet-applied-bd-businness-matching-at-tradeshows-en.html",
   "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-en.html",
+  "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-de.html",
 ]);
 
 const factsheetTranslationPairs = [
   {
     en: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-en.html",
-    de: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-strategic-leadership-alignment-de.html",
   },
   {
     en: "fact-sheets-html/fact-sheet-applied-bd-efficiency-and-strength-in-closing-en.html",
     de: "fact-sheets-html/fact-sheet-applied-bd-interne-effizienz-und-vertriebliche-abschlußstärke-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-executive-coaching-en2022.html",
+    de: "fact-sheets-html/fact-sheet-führungskräfte-coaching-de.html",
   },
   {
     en: "fact-sheets-html/fact-sheet-applied-bd-sales-potential-analysis-en.html",
@@ -493,6 +483,18 @@ const factsheetTranslationPairs = [
   {
     en: "fact-sheets-html/fact-sheet-applied-bd-wcs-training-en.html",
     de: "fact-sheets-html/fact-sheet-applied-bd-verbesserung-ihrer-verkaufschancen-in-aktuellen-b2b-vertriebsprojekten-wcs-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-en.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-business-matching-at-tradeshows-de.html",
+  },
+  {
+    en: "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-en.html",
+    de: "fact-sheets-html/fact-sheet-applied-bd-solution-selling-skills-in-the-exhibition-industry-2022-de.html",
+  },
+  {
+    en: "fact-sheets-html/hr-factsheet-en.html",
+    de: "fact-sheets-html/hr-factsheet-de.html",
   },
   {
     en: "fact-sheets-html/fact-sheet-high-engagement-race-en.html",
@@ -536,7 +538,7 @@ function getFactsheetTitleByFile(filePath, lang) {
 const consultantProfiles = {
   kurt: {
     name: "Kurt Schraudy",
-    image: "images/Kurt-Schraudy-bw.avif",
+    image: "assets/images/Kurt-Schraudy-bw.avif",
     role: {
       en: "Founder / Advisor",
       de: "Gründer / Berater",
@@ -570,7 +572,7 @@ const consultantProfiles = {
   },
   lina: {
     name: "Lina Chan",
-    image: "images/Lina-Chan-bw.avif",
+    image: "assets/images/Lina-Chan-bw.avif",
     role: {
       en: "Advisor",
       de: "Beraterin",
@@ -622,6 +624,8 @@ const elements = {
   factsheetModal: document.getElementById("factsheet-modal"),
 
   factsheetContent: document.getElementById("factsheet-modal-content"),
+
+  modalStack: document.getElementById("modal-stack"),
 
   consultantCards: document.querySelectorAll(
     ".consultant-card[data-consultant]",
@@ -849,10 +853,13 @@ function renderModal(expertiseKey) {
 
 function openFactsheet(project, preferredLang = state.lang) {
   const requestedLang = preferredLang === "de" ? "de" : "en";
-  const filePath =
-    project.files[requestedLang] || project.files.en || project.files.de;
+
+  // Use the files object passed from openExpertiseDetails
+  const files = project.files || {};
+  const filePath = files[requestedLang] || files["en"] || files["de"];
 
   if (!filePath) {
+    console.error("No file path found for project:", project);
     return;
   }
 
@@ -993,7 +1000,7 @@ function openConsultantModal(consultantKey) {
       >
         <img
           class="consultant-modal-contact-icon"
-          src="images/send-mail.svg"
+          src="assets/images/send-mail.svg"
           alt=""
           aria-hidden="true"
         />
@@ -1319,6 +1326,15 @@ function installEventHandlers() {
       closeFactsheet();
     }
   });
+
+  // Clicking the grid wrapper background (gap/padding) closes everything
+  if (elements.modalStack) {
+    elements.modalStack.addEventListener("click", (event) => {
+      if (event.target === elements.modalStack) {
+        closeModal();
+      }
+    });
+  }
 
   if (elements.consultantModal) {
     elements.consultantModal.addEventListener("click", (event) => {

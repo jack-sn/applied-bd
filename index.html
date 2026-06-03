@@ -14,10 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="icon"
+      href="assets/images/favicon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
   </head>
 
-  <body>
+  <body id="top">
     <header class="site-header">
       <div class="container nav-row">
         <button
@@ -32,7 +39,7 @@
         </button>
         <a href="#top" class="logo">
           <img
-            src="images/applied-bd-logo.svg"
+            src="assets/images/applied-bd-logo.svg"
             alt="Applied BD logo"
             class="logo-img"
             width="200"
@@ -98,7 +105,7 @@
         </div>
       </div>
     </header>
-    <main id="top">
+    <main>
       <section class="hero">
         <div class="container">
           <div class="hero-copy">
@@ -106,7 +113,7 @@
               Die Consulting-Boutique: applied business development
             </p>
             <h1 id="hero-heading">
-              Business trifft HR – <br />
+              Business trifft HR: <br />
               Wir erschließen neue Märkte und führen ihr Unternehmen sicher
               durch Transformation – international erfahren, pragmatisch in der
               Umsetzung.
@@ -127,9 +134,10 @@
         <div class="container">
           <div class="services-grid">
             <h2 id="mission-text">
-              Unsere Mission ist es, Unternehmen in Vertrieb, Führung und
-              Organisation so aufzustellen, dass Wachstum, Transformation und HR
-              wirklich zusammenpassen - statt nebeneinander herzulaufen.
+              Unsere Mission ist es, Unternehmen in Vertrieb, <br />Führung und
+              Organisation so aufzustellen, dass Wachstum,<br />Transformation
+              und HR wirklich zusammenpassen <br />- statt nebeneinander
+              herzulaufen.
             </h2>
           </div>
         </div>
@@ -141,12 +149,16 @@
               <p class="section-kicker" id="expertise-kicker">
                 Unsere Expertise
               </p>
-              <h2 id="expertise-heading">Unsere Expertise, Ihr Nutzen!</h2>
+              <h2 id="expertise-heading">
+                Unsere Expertise, <br />
+                Ihr Nutzen!
+              </h2>
               <p class="section-intro" id="expertise-intro">
-                Dafür kombinieren wir praxisnahe Sales, Coaching und moderne
-                HR-Arbeit zu umsetzungsstarken Programmen, die pragmatisch an
-                realen Projekten ansetzen. Besonders konzentrieren wir uns
-                darauf, internationale Mittelständler nachhaltig zu stärken.
+                Dafür kombinieren wir Sales, Coaching und moderne HR-Arbeit zu
+                umsetzungsstarken Programmen, die pragmatisch an realen
+                Projekten ansetzen. Besonders konzentrieren wir uns darauf, für
+                und mit unseren Kunden internationale Märkte zu erschließen. Für
+                Messegesellschaften bieten wir besondere Vertriebsprogramme an.
               </p>
               <!-- Wir verwandeln praktische Expertise in geschäftliche Ergebnisse,
                 indem wir Führung, Marktentwicklung und HR-Programme mit
@@ -220,57 +232,63 @@
           </div>
         </div>
       </section>
-      <div class="expertise-modal" id="expertise-modal" aria-hidden="true">
-        <div class="expertise-modal-backdrop" data-close="modal"></div>
-        <div
-          class="expertise-modal-panel"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="expertise-modal-title"
-        >
-          <button class="modal-close" type="button" aria-label="Close details">
-            &times;
-          </button>
-          <div class="modal-content">
-            <p class="section-kicker modal-kicker" id="expertise-modal-label">
-              Expertise-Übersicht
-            </p>
-            <h3 id="expertise-modal-title"></h3>
-            <p class="modal-description" id="expertise-modal-description"></p>
-            <div class="modal-projects">
-              <p
-                class="modal-projects-heading"
-                id="expertise-modal-projects-heading"
-              >
-                Verwandte Fact Sheets
+      <div class="modal-stack" id="modal-stack">
+        <div class="expertise-modal" id="expertise-modal" aria-hidden="true">
+          <div class="expertise-modal-backdrop" data-close="modal"></div>
+          <div
+            class="expertise-modal-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="expertise-modal-title"
+          >
+            <button
+              class="modal-close"
+              type="button"
+              aria-label="Close details"
+            >
+              &times;
+            </button>
+            <div class="modal-content">
+              <p class="section-kicker modal-kicker" id="expertise-modal-label">
+                Expertise-Übersicht
               </p>
-              <ul id="expertise-modal-projects"></ul>
+              <h3 id="expertise-modal-title"></h3>
+              <p class="modal-description" id="expertise-modal-description"></p>
+              <div class="modal-projects">
+                <p
+                  class="modal-projects-heading"
+                  id="expertise-modal-projects-heading"
+                >
+                  Verwandte Fact Sheets
+                </p>
+                <ul id="expertise-modal-projects"></ul>
+              </div>
+              <p class="modal-note" id="expertise-modal-note">
+                Alle passenden Fact Sheets sind im Fact Sheets-Ordner verfügbar.
+              </p>
             </div>
-            <p class="modal-note" id="expertise-modal-note">
-              Alle passenden Fact Sheets sind im Fact Sheets-Ordner verfügbar.
-            </p>
           </div>
         </div>
-      </div>
-      <div class="factsheet-modal" id="factsheet-modal" aria-hidden="true">
-        <div class="factsheet-modal-backdrop" data-close="factsheet"></div>
-        <div
-          class="factsheet-modal-panel"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="factsheet-modal-title"
-        >
-          <button
-            class="modal-close factsheet-back-button"
-            type="button"
-            aria-label="Close fact sheet"
-          >
-            &#8249; back
-          </button>
+        <div class="factsheet-modal" id="factsheet-modal" aria-hidden="true">
+          <div class="factsheet-modal-backdrop" data-close="factsheet"></div>
           <div
-            class="factsheet-modal-content"
-            id="factsheet-modal-content"
-          ></div>
+            class="factsheet-modal-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="factsheet-modal-title"
+          >
+            <button
+              class="modal-close factsheet-back-button"
+              type="button"
+              aria-label="Close fact sheet"
+            >
+              &#8249; back
+            </button>
+            <div
+              class="factsheet-modal-content"
+              id="factsheet-modal-content"
+            ></div>
+          </div>
         </div>
       </div>
       <div class="consultant-modal" id="consultant-modal" aria-hidden="true">
@@ -300,7 +318,8 @@
             <div class="kicker-container">
               <p class="section-kicker" id="consultants-kicker">Berater</p>
               <h2 id="consultants-heading">
-                Erfahrene Sparringspartner für anspruchsvolle Wachstumsphasen.
+                Erfahrene Sparringspartner für anspruchsvolle Wachstumsphasen
+                und Transformation.
               </h2>
               <p class="section-intro" id="consultants-intro">
                 Unsere Berater verbinden Executive-Erfahrung mit pragmatischer
@@ -319,7 +338,11 @@
               aria-label="Open profile for Kurt Schraudy"
             >
               <div class="consultant-avatar" aria-hidden="true">
-                <img src="images/Kurt-Schraudy-bw.avif" alt="" loading="lazy" />
+                <img
+                  src="assets/images/Kurt-Schraudy-bw.avif"
+                  alt="kurt-schraudy-image"
+                  loading="lazy"
+                />
               </div>
               <div class="consultant-content">
                 <h3>Kurt Schraudy</h3>
@@ -349,7 +372,11 @@
               aria-label="Open profile for Lina Chan"
             >
               <div class="consultant-avatar" aria-hidden="true">
-                <img src="images/Lina-Chan-bw.avif" alt="" loading="lazy" />
+                <img
+                  src="assets/images/Lina-Chan-bw.avif"
+                  alt="lina-chan-image"
+                  loading="lazy"
+                />
               </div>
               <div class="consultant-content">
                 <h3>Lina Chan</h3>
@@ -390,91 +417,94 @@
           <div class="logo-marquee" aria-label="Client references">
             <div class="logo-track">
               <div class="logo-item">
-                <img src="images/daitron.png" alt="Daitron logo" />
+                <img src="assets/images/daitron.png" alt="Daitron logo" />
               </div>
               <div class="logo-item">
-                <img src="images/diamos.png" alt="Diamos logo" />
-              </div>
-              <div class="logo-item">
-                <img src="images/INOUE SHOJI.png" alt="Inoue Shoji logo" />
+                <img src="assets/images/diamos.png" alt="Diamos logo" />
               </div>
               <div class="logo-item">
                 <img
-                  src="images/nürnberg messe.png"
+                  src="assets/images/INOUE SHOJI.png"
+                  alt="Inoue Shoji logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="assets/images/nürnberg messe.png"
                   alt="Nürnberg Messe logo"
                 />
               </div>
               <div class="logo-item">
-                <img src="images/nxp.png" alt="NXP logo" />
+                <img src="assets/images/nxp.png" alt="NXP logo" />
               </div>
               <div class="logo-item">
-                <img src="images/saki.png" alt="Saki logo" />
+                <img src="assets/images/saki.png" alt="Saki logo" />
               </div>
               <div class="logo-item">
-                <img src="images/Seed.png" alt="Seed logo" />
+                <img src="assets/images/Seed.png" alt="Seed logo" />
               </div>
               <div class="logo-item">
-                <img src="images/siemens.png" alt="Siemens logo" />
+                <img src="assets/images/siemens.png" alt="Siemens logo" />
               </div>
               <div class="logo-item">
-                <img src="images/veolia.png" alt="Veolia logo" />
+                <img src="assets/images/veolia.png" alt="Veolia logo" />
               </div>
               <div class="logo-item">
-                <img src="images/versatel.png" alt="Versatel logo" />
+                <img src="assets/images/versatel.png" alt="Versatel logo" />
               </div>
               <div class="logo-item">
-                <img src="images/vnu.png" alt="VNU logo" />
+                <img src="assets/images/vnu.png" alt="VNU logo" />
               </div>
               <div class="logo-item">
-                <img src="images/wb.png" alt="WB logo" />
+                <img src="assets/images/wb.png" alt="WB logo" />
               </div>
               <div class="logo-item">
-                <img src="images/webasto.png" alt="Webasto logo" />
+                <img src="assets/images/webasto.png" alt="Webasto logo" />
               </div>
               <div class="logo-item">
-                <img src="images/ykt.png" alt="YKT logo" />
+                <img src="assets/images/ykt.png" alt="YKT logo" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/daitron.png" alt="" />
+                <img src="assets/images/daitron.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/diamos.png" alt="" />
+                <img src="assets/images/diamos.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/INOUE SHOJI.png" alt="" />
+                <img src="assets/images/INOUE SHOJI.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/nürnberg messe.png" alt="" />
+                <img src="assets/images/nürnberg messe.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/nxp.png" alt="" />
+                <img src="assets/images/nxp.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/saki.png" alt="" />
+                <img src="assets/images/saki.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/Seed.png" alt="" />
+                <img src="assets/images/Seed.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/siemens.png" alt="" />
+                <img src="assets/images/siemens.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/veolia.png" alt="" />
+                <img src="assets/images/veolia.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/versatel.png" alt="" />
+                <img src="assets/images/versatel.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/vnu.png" alt="" />
+                <img src="assets/images/vnu.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/wb.png" alt="" />
+                <img src="assets/images/wb.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/webasto.png" alt="" />
+                <img src="assets/images/webasto.png" alt="" />
               </div>
               <div class="logo-item" aria-hidden="true">
-                <img src="images/ykt.png" alt="" />
+                <img src="assets/images/ykt.png" alt="" />
               </div>
             </div>
           </div>
@@ -509,7 +539,12 @@
             </div>
           </div>
 
-          <form class="contact-form">
+          <!-- TODO: Replace YOUR_FORM_ID with the Formspree form ID from formspree.io -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
             <div class="form-row">
               <label for="name" id="form-name-label">Name</label>
               <input id="name" type="text" placeholder="Ihr Name" />
@@ -554,14 +589,14 @@
       <div class="container footer-row">
         <p id="footer-copy">© 2026 Applied Business Development</p>
         <div class="footer-links">
-          <a href="impressum.html" id="footer-imprint">Impressum</a>
-          <a href="datenschutz.html" id="footer-privacy">Datenschutz</a>
+          <a href="pages/impressum.html" id="footer-imprint">Impressum</a>
+          <a href="pages/datenschutz.html" id="footer-privacy">Datenschutz</a>
           <a href="#top" id="footer-top">Nach oben</a>
         </div>
       </div>
     </footer>
 
-    <script src="expertise-lightbox.js"></script>
+    <script src="js/expertise-lightbox.js"></script>
     <script>
       // Mobile menu toggle
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
