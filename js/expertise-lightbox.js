@@ -1032,51 +1032,46 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  const t = uiText[lang];
+  // DE = HTML is source of truth, never touch the DOM
+  if (lang === "de") {
+    location.reload();
+    return;
+  }
+
+  // EN only below
+  const t = uiText.en;
 
   if (elements.heroEyebrow) elements.heroEyebrow.textContent = t.heroEyebrow;
-
   if (elements.heroHeading) elements.heroHeading.innerHTML = t.heroHeading;
-
   if (elements.heroTalk) elements.heroTalk.textContent = t.heroTalk;
-
   if (elements.heroExplore) elements.heroExplore.textContent = t.heroExplore;
-
   if (elements.heroCardTitle)
     elements.heroCardTitle.textContent = t.heroCardTitle;
-
   if (elements.heroCardText) elements.heroCardText.textContent = t.heroCardText;
-
   if (elements.missionText) elements.missionText.innerHTML = t.missionText;
 
   if (elements.expertiseKicker)
     elements.expertiseKicker.textContent = t.expertiseKicker;
-
   if (elements.expertiseHeading)
     elements.expertiseHeading.innerHTML = t.expertiseHeading;
 
   if (elements.service1Title)
     elements.service1Title.textContent =
-      expertiseData["business-transformation"].title[lang];
-
+      expertiseData["business-transformation"].title.en;
   if (elements.service1Text)
     elements.service1Text.textContent =
-      expertiseData["business-transformation"].description[lang];
-
+      expertiseData["business-transformation"].description.en;
   if (elements.service2Title)
     elements.service2Title.textContent =
-      expertiseData["growth-market-development"].title[lang];
-
+      expertiseData["growth-market-development"].title.en;
   if (elements.service2Text)
     elements.service2Text.textContent =
-      expertiseData["growth-market-development"].description[lang];
-
+      expertiseData["growth-market-development"].description.en;
   if (elements.service3Title)
     elements.service3Title.textContent = t.service3Title;
-
   if (elements.service3Text)
     elements.service3Text.textContent =
-      expertiseData["hr-excellence"].description[lang];
+      expertiseData["hr-excellence"].description.en;
 
   if (elements.service1Action)
     elements.service1Action.textContent = t.serviceAction;
@@ -1090,13 +1085,11 @@ function setLanguage(lang) {
 
   if (elements.consultantsKicker)
     elements.consultantsKicker.textContent = t.consultantsKicker;
-
   if (elements.consultantsHeading)
     elements.consultantsHeading.textContent = t.consultantsHeading;
 
   if (elements.referencesKicker)
     elements.referencesKicker.textContent = t.referencesKicker;
-
   if (elements.referencesHeading)
     elements.referencesHeading.textContent = t.referencesHeading;
 
@@ -1200,9 +1193,7 @@ function setLanguage(lang) {
 
   if (elements.contactHeading)
     elements.contactHeading.textContent = t.contactHeading;
-
   if (elements.contactText) elements.contactText.textContent = t.contactText;
-
   if (elements.contactSubmit)
     elements.contactSubmit.textContent = t.contactSubmit;
 
