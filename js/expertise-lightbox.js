@@ -1024,6 +1024,7 @@ function closeConsultantModal() {
 }
 
 function setLanguage(lang) {
+  const prevLang = state.lang;
   state.lang = lang;
 
   document.documentElement.lang = lang;
@@ -1033,8 +1034,11 @@ function setLanguage(lang) {
   });
 
   // DE = HTML is source of truth, never touch the DOM
+  // Only reload when switching back from EN, not on initial load
   if (lang === "de") {
-    location.reload();
+    if (prevLang === "en") {
+      location.reload();
+    }
     return;
   }
 
