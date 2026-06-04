@@ -1107,7 +1107,7 @@ function setLanguage(lang) {
 
   if (elements.referencesKicker)
     elements.referencesKicker.textContent = t.referencesKicker;
-  if (elements.referencesHeading)
+  if (elements.referencesHeading && lang !== "de")
     elements.referencesHeading.textContent = t.referencesHeading;
 
   if (elements.consultantsIntro)
@@ -1206,7 +1206,7 @@ function setLanguage(lang) {
     if (openKey) openConsultantModal(openKey);
   }
 
-  if (elements.sectionIntro) elements.sectionIntro.textContent = t.sectionIntro;
+  if (elements.sectionIntro && lang !== "de") elements.sectionIntro.textContent = t.sectionIntro;
 
   if (elements.contactHeading)
     elements.contactHeading.textContent = t.contactHeading;
