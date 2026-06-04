@@ -1311,18 +1311,18 @@ function installEventHandlers() {
 
 function saveOriginalTexts() {
   const elementsToSave = [
-    "heroEyebrow", "heroHeading", "heroTalk", "heroExplore", "heroCardTitle", "heroCardText", "missionText",
-    "expertiseKicker", "expertiseHeading",
-    "service1Title", "service1Text", "service2Title", "service2Text", "service3Title", "service3Text",
-    "service1Action", "service2Action", "service3Action",
-    "expertiseTalkLink",
-    "consultantsKicker", "consultantsHeading", "referencesKicker", "referencesHeading", "consultantsIntro",
-    "sectionIntro",
-    "contactKicker", "contactHeading", "contactText", "contactSubmit",
-    "navMission", "navExpertise", "navConsultants", "navReferences", "navContact",
-    "detailMailLabel", "detailLocationLabel", "detailLocationValue",
-    "formNameLabel", "formEmailLabel", "formSubjectLabel", "formMessageLabel",
-    "footerCopy", "footerImprint", "footerPrivacy", "footerTop"
+    "hero-eyebrow", "hero-heading", "hero-talk", "hero-explore", "hero-card-title", "hero-card-text", "mission-text",
+    "expertise-kicker", "expertise-heading",
+    "service-1-title", "service-1-text", "service-2-title", "service-2-text", "service-3-title", "service-3-text",
+    "service-1-action", "service-2-action", "service-3-action",
+    "expertise-talk-link",
+    "consultants-kicker", "consultants-heading", "references-kicker", "references-heading", "consultants-intro",
+    "expertise-intro",
+    "contact-kicker", "contact-heading", "contact-text", "contact-submit",
+    "nav-expertise", "nav-consultants", "nav-references", "nav-contact",
+    "detail-mail-label", "detail-location-label", "detail-location-value",
+    "form-name-label", "form-email-label", "form-subject-label", "form-message-label",
+    "footer-copy", "footer-imprint", "footer-privacy", "footer-top"
   ];
 
   elementsToSave.forEach(id => {
