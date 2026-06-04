@@ -1042,6 +1042,12 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
+  // Reload page when switching to German to restore index.html content
+  if (lang === "de" && prevLang !== "de") {
+    location.reload();
+    return;
+  }
+
   // Reload fact sheet if it's open when language changes
   if (
     state.activeFactsheetProject &&
