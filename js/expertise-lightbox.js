@@ -283,7 +283,7 @@ const uiText = {
     heroEyebrow: "Die Consulting-Boutique: applied business development",
 
     heroHeading:
-      "Business trifft HR: <br />Wir erschließen neue Märkte und führen ihr Unternehmen sicher durch Transformation – international erfahren, pragmatisch in der Umsetzung.",
+      "Business trifft HR:<br />Wir erschließen neue Märkte und führen ihr Unternehmen sicher durch Transformation – international erfahren, pragmatisch in der Umsetzung.",
 
     heroTalk: "Jetzt sprechen",
 
@@ -1328,7 +1328,7 @@ function saveOriginalTexts() {
   elementsToSave.forEach(id => {
     const el = document.getElementById(id);
     if (el) {
-      state.originalTexts[id] = el.textContent;
+      state.originalTexts[id] = el.innerHTML;
     }
   });
 }
@@ -1337,7 +1337,7 @@ function restoreOriginalTexts() {
   Object.keys(state.originalTexts).forEach(id => {
     const el = document.getElementById(id);
     if (el) {
-      el.textContent = state.originalTexts[id];
+      el.innerHTML = state.originalTexts[id];
     }
   });
 }

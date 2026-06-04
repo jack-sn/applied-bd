@@ -115,7 +115,7 @@
 }
 
 .fc-content table td:first-child {
-    width: 190px;
+    width: 300px;
     color: #b7238a;
     font-weight: 400;
     font-size: 16px;
@@ -133,6 +133,7 @@
 
 .fc-content p:last-child {
     margin-bottom: 0;
+    width: 230px;
 }
 
 .fc-content p strong {
