@@ -433,6 +433,7 @@ const state = {
   lang: "de",
   activeFactsheetProject: null,
   activeExpertise: null,
+  originalTexts: {},
 };
 
 const availableFactsheetFiles = new Set([
@@ -1042,12 +1043,6 @@ function setLanguage(lang) {
     button.classList.toggle("active", button.dataset.lang === lang);
   });
 
-  // Reload page when switching to German to restore index.html content
-  if (lang === "de" && prevLang !== "de") {
-    location.reload();
-    return;
-  }
-
   // Reload fact sheet if it's open when language changes
   if (
     state.activeFactsheetProject &&
@@ -1064,8 +1059,10 @@ function setLanguage(lang) {
   // Use uiText[lang] for both DE and EN (dynamic translation)
   const t = uiText[lang];
 
-  // Skip text updates for German - use index.html content
-  if (lang !== "de") {
+  // Skip text updates for German - restore original index.html content
+  if (lang === "de") {
+    restoreOriginalTexts();
+  } else {
     if (elements.heroEyebrow) elements.heroEyebrow.textContent = t.heroEyebrow;
     if (elements.heroHeading) elements.heroHeading.innerHTML = t.heroHeading;
     if (elements.heroTalk) elements.heroTalk.textContent = t.heroTalk;
@@ -1312,9 +1309,42 @@ function installEventHandlers() {
   });
 }
 
+function saveOriginalTexts() {
+  const elementsToSave = [
+    "heroEyebrow", "heroHeading", "heroTalk", "heroExplore", "heroCardTitle", "heroCardText", "missionText",
+    "expertiseKicker", "expertiseHeading",
+    "service1Title", "service1Text", "service2Title", "service2Text", "service3Title", "service3Text",
+    "service1Action", "service2Action", "service3Action",
+    "expertiseTalkLink",
+    "consultantsKicker", "consultantsHeading", "referencesKicker", "referencesHeading", "consultantsIntro",
+    "sectionIntro",
+    "contactKicker", "contactHeading", "contactText", "contactSubmit",
+    "navMission", "navExpertise", "navConsultants", "navReferences", "navContact",
+    "detailMailLabel", "detailLocationLabel", "detailLocationValue",
+    "formNameLabel", "formEmailLabel", "formSubjectLabel", "formMessageLabel",
+    "footerCopy", "footerImprint", "footerPrivacy", "footerTop"
+  ];
+
+  elementsToSave.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      state.originalTexts[id] = el.textContent;
+    }
+  });
+}
+
+function restoreOriginalTexts() {
+  Object.keys(state.originalTexts).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.textContent = state.originalTexts[id];
+    }
+  });
+}
+
 function init() {
   installEventHandlers();
-
+  saveOriginalTexts();
   setLanguage(state.lang);
 }
 
