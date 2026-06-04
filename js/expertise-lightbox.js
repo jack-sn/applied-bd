@@ -1058,164 +1058,167 @@ function setLanguage(lang) {
   // Use uiText[lang] for both DE and EN (dynamic translation)
   const t = uiText[lang];
 
-  if (elements.heroEyebrow) elements.heroEyebrow.textContent = t.heroEyebrow;
-  if (elements.heroHeading) elements.heroHeading.innerHTML = t.heroHeading;
-  if (elements.heroTalk) elements.heroTalk.textContent = t.heroTalk;
-  if (elements.heroExplore) elements.heroExplore.textContent = t.heroExplore;
-  if (elements.heroCardTitle)
-    elements.heroCardTitle.textContent = t.heroCardTitle;
-  if (elements.heroCardText) elements.heroCardText.textContent = t.heroCardText;
-  if (elements.missionText) elements.missionText.innerHTML = t.missionText;
+  // Skip text updates for German - use index.html content
+  if (lang !== "de") {
+    if (elements.heroEyebrow) elements.heroEyebrow.textContent = t.heroEyebrow;
+    if (elements.heroHeading) elements.heroHeading.innerHTML = t.heroHeading;
+    if (elements.heroTalk) elements.heroTalk.textContent = t.heroTalk;
+    if (elements.heroExplore) elements.heroExplore.textContent = t.heroExplore;
+    if (elements.heroCardTitle)
+      elements.heroCardTitle.textContent = t.heroCardTitle;
+    if (elements.heroCardText) elements.heroCardText.textContent = t.heroCardText;
+    if (elements.missionText) elements.missionText.innerHTML = t.missionText;
 
-  if (elements.expertiseKicker)
-    elements.expertiseKicker.textContent = t.expertiseKicker;
-  if (elements.expertiseHeading)
-    elements.expertiseHeading.innerHTML = t.expertiseHeading;
+    if (elements.expertiseKicker)
+      elements.expertiseKicker.textContent = t.expertiseKicker;
+    if (elements.expertiseHeading)
+      elements.expertiseHeading.innerHTML = t.expertiseHeading;
 
-  if (elements.service1Title)
-    elements.service1Title.textContent =
-      expertiseData["business-transformation"].title[lang];
-  if (elements.service1Text)
-    elements.service1Text.textContent =
-      expertiseData["business-transformation"].description[lang];
-  if (elements.service2Title)
-    elements.service2Title.textContent =
-      expertiseData["growth-market-development"].title[lang];
-  if (elements.service2Text)
-    elements.service2Text.textContent =
-      expertiseData["growth-market-development"].description[lang];
-  if (elements.service3Title)
-    elements.service3Title.textContent = t.service3Title;
-  if (elements.service3Text)
-    elements.service3Text.textContent =
-      expertiseData["hr-excellence"].description[lang];
+    if (elements.service1Title)
+      elements.service1Title.textContent =
+        expertiseData["business-transformation"].title[lang];
+    if (elements.service1Text)
+      elements.service1Text.textContent =
+        expertiseData["business-transformation"].description[lang];
+    if (elements.service2Title)
+      elements.service2Title.textContent =
+        expertiseData["growth-market-development"].title[lang];
+    if (elements.service2Text)
+      elements.service2Text.textContent =
+        expertiseData["growth-market-development"].description[lang];
+    if (elements.service3Title)
+      elements.service3Title.textContent = t.service3Title;
+    if (elements.service3Text)
+      elements.service3Text.textContent =
+        expertiseData["hr-excellence"].description[lang];
 
-  if (elements.service1Action)
-    elements.service1Action.textContent = t.serviceAction;
-  if (elements.service2Action)
-    elements.service2Action.textContent = t.serviceAction;
-  if (elements.service3Action)
-    elements.service3Action.textContent = t.serviceAction;
+    if (elements.service1Action)
+      elements.service1Action.textContent = t.serviceAction;
+    if (elements.service2Action)
+      elements.service2Action.textContent = t.serviceAction;
+    if (elements.service3Action)
+      elements.service3Action.textContent = t.serviceAction;
 
-  if (elements.expertiseTalkLink)
-    elements.expertiseTalkLink.textContent = t.expertiseTalkLink;
+    if (elements.expertiseTalkLink)
+      elements.expertiseTalkLink.textContent = t.expertiseTalkLink;
 
-  if (elements.consultantsKicker)
-    elements.consultantsKicker.textContent = t.consultantsKicker;
-  if (elements.consultantsHeading)
-    elements.consultantsHeading.textContent = t.consultantsHeading;
+    if (elements.consultantsKicker)
+      elements.consultantsKicker.textContent = t.consultantsKicker;
+    if (elements.consultantsHeading)
+      elements.consultantsHeading.textContent = t.consultantsHeading;
 
-  if (elements.referencesKicker)
-    elements.referencesKicker.textContent = t.referencesKicker;
-  if (elements.referencesHeading && lang !== "de")
-    elements.referencesHeading.textContent = t.referencesHeading;
+    if (elements.referencesKicker)
+      elements.referencesKicker.textContent = t.referencesKicker;
+    if (elements.referencesHeading)
+      elements.referencesHeading.textContent = t.referencesHeading;
 
-  if (elements.consultantsIntro)
-    elements.consultantsIntro.textContent = t.consultantsIntro;
+    if (elements.consultantsIntro)
+      elements.consultantsIntro.textContent = t.consultantsIntro;
 
-  if (elements.consultantKurtRole)
-    elements.consultantKurtRole.textContent = t.consultants.kurt.role;
-  if (elements.consultantKurtSummary)
-    elements.consultantKurtSummary.textContent = t.consultants.kurt.summary;
-  if (elements.consultantKurtMeta1)
-    elements.consultantKurtMeta1.textContent = t.consultants.kurt.meta[0];
-  if (elements.consultantKurtMeta2)
-    elements.consultantKurtMeta2.textContent = t.consultants.kurt.meta[1];
-  if (elements.consultantKurtMeta3)
-    elements.consultantKurtMeta3.textContent = t.consultants.kurt.meta[2];
-  if (elements.consultantKurtAction)
-    elements.consultantKurtAction.textContent = t.consultants.action;
+    if (elements.consultantKurtRole)
+      elements.consultantKurtRole.textContent = t.consultants.kurt.role;
+    if (elements.consultantKurtSummary)
+      elements.consultantKurtSummary.textContent = t.consultants.kurt.summary;
+    if (elements.consultantKurtMeta1)
+      elements.consultantKurtMeta1.textContent = t.consultants.kurt.meta[0];
+    if (elements.consultantKurtMeta2)
+      elements.consultantKurtMeta2.textContent = t.consultants.kurt.meta[1];
+    if (elements.consultantKurtMeta3)
+      elements.consultantKurtMeta3.textContent = t.consultants.kurt.meta[2];
+    if (elements.consultantKurtAction)
+      elements.consultantKurtAction.textContent = t.consultants.action;
 
-  if (elements.consultantLinaRole)
-    elements.consultantLinaRole.textContent = t.consultants.lina.role;
-  if (elements.consultantLinaSummary)
-    elements.consultantLinaSummary.textContent = t.consultants.lina.summary;
-  if (elements.consultantLinaMeta1)
-    elements.consultantLinaMeta1.textContent = t.consultants.lina.meta[0];
-  if (elements.consultantLinaMeta2)
-    elements.consultantLinaMeta2.textContent = t.consultants.lina.meta[1];
-  if (elements.consultantLinaMeta3)
-    elements.consultantLinaMeta3.textContent = t.consultants.lina.meta[2];
-  if (elements.consultantLinaAction)
-    elements.consultantLinaAction.textContent = t.consultants.action;
+    if (elements.consultantLinaRole)
+      elements.consultantLinaRole.textContent = t.consultants.lina.role;
+    if (elements.consultantLinaSummary)
+      elements.consultantLinaSummary.textContent = t.consultants.lina.summary;
+    if (elements.consultantLinaMeta1)
+      elements.consultantLinaMeta1.textContent = t.consultants.lina.meta[0];
+    if (elements.consultantLinaMeta2)
+      elements.consultantLinaMeta2.textContent = t.consultants.lina.meta[1];
+    if (elements.consultantLinaMeta3)
+      elements.consultantLinaMeta3.textContent = t.consultants.lina.meta[2];
+    if (elements.consultantLinaAction)
+      elements.consultantLinaAction.textContent = t.consultants.action;
 
-  elements.consultantCards.forEach((card) => {
-    const consultantKey = card.dataset.consultant;
-    if (consultantKey && t.consultants.aria[consultantKey]) {
-      card.setAttribute("aria-label", t.consultants.aria[consultantKey]);
+    elements.consultantCards.forEach((card) => {
+      const consultantKey = card.dataset.consultant;
+      if (consultantKey && t.consultants.aria[consultantKey]) {
+        card.setAttribute("aria-label", t.consultants.aria[consultantKey]);
+      }
+    });
+
+    if (elements.navMission) elements.navMission.textContent = t.labels.mission;
+    if (elements.navExpertise)
+      elements.navExpertise.textContent = t.labels.expertise;
+    if (elements.navConsultants)
+      elements.navConsultants.textContent = t.labels.consultants;
+    if (elements.navReferences)
+      elements.navReferences.textContent = t.labels.references;
+    if (elements.navContact) elements.navContact.textContent = t.labels.contact;
+
+    if (elements.contactKicker)
+      elements.contactKicker.textContent = t.contactKicker;
+
+    if (elements.detailMailLabel)
+      elements.detailMailLabel.textContent = t.detailMailLabel;
+    if (elements.detailLocationLabel)
+      elements.detailLocationLabel.textContent = t.detailLocationLabel;
+    if (elements.detailLocationValue)
+      elements.detailLocationValue.textContent = t.detailLocationValue;
+
+    if (elements.formNameLabel)
+      elements.formNameLabel.textContent = t.formNameLabel;
+    if (elements.formEmailLabel)
+      elements.formEmailLabel.textContent = t.formEmailLabel;
+    if (elements.formSubjectLabel)
+      elements.formSubjectLabel.textContent = t.formSubjectLabel;
+    if (elements.formMessageLabel)
+      elements.formMessageLabel.textContent = t.formMessageLabel;
+
+    if (elements.formNameInput)
+      elements.formNameInput.placeholder = t.formNamePlaceholder;
+    if (elements.formEmailInput)
+      elements.formEmailInput.placeholder = t.formEmailPlaceholder;
+    if (elements.formSubjectInput)
+      elements.formSubjectInput.placeholder = t.formSubjectPlaceholder;
+    if (elements.formMessageInput)
+      elements.formMessageInput.placeholder = t.formMessagePlaceholder;
+
+    if (elements.footerCopy) elements.footerCopy.textContent = t.footerCopy;
+    if (elements.footerImprint)
+      elements.footerImprint.textContent = t.footerImprint;
+    if (elements.footerPrivacy)
+      elements.footerPrivacy.textContent = t.footerPrivacy;
+    if (elements.footerTop) elements.footerTop.textContent = t.footerTop;
+
+    const expertiseClose = elements.modal?.querySelector(".modal-close");
+    const factsheetClose = elements.factsheetModal?.querySelector(".modal-close");
+    const consultantClose =
+      elements.consultantModal?.querySelector(".modal-close");
+    if (expertiseClose)
+      expertiseClose.setAttribute("aria-label", t.closeLabels.expertise);
+    if (factsheetClose)
+      factsheetClose.setAttribute("aria-label", t.closeLabels.factsheet);
+    if (consultantClose)
+      consultantClose.setAttribute("aria-label", t.closeLabels.consultant);
+
+    if (elements.consultantModal.classList.contains("open")) {
+      const openKey = elements.consultantModal.dataset.consultant;
+      if (openKey) openConsultantModal(openKey);
     }
-  });
 
-  if (elements.navMission) elements.navMission.textContent = t.labels.mission;
-  if (elements.navExpertise)
-    elements.navExpertise.textContent = t.labels.expertise;
-  if (elements.navConsultants)
-    elements.navConsultants.textContent = t.labels.consultants;
-  if (elements.navReferences)
-    elements.navReferences.textContent = t.labels.references;
-  if (elements.navContact) elements.navContact.textContent = t.labels.contact;
+    if (elements.sectionIntro) elements.sectionIntro.textContent = t.sectionIntro;
 
-  if (elements.contactKicker)
-    elements.contactKicker.textContent = t.contactKicker;
+    if (elements.contactHeading)
+      elements.contactHeading.textContent = t.contactHeading;
+    if (elements.contactText) elements.contactText.textContent = t.contactText;
+    if (elements.contactSubmit)
+      elements.contactSubmit.textContent = t.contactSubmit;
 
-  if (elements.detailMailLabel)
-    elements.detailMailLabel.textContent = t.detailMailLabel;
-  if (elements.detailLocationLabel)
-    elements.detailLocationLabel.textContent = t.detailLocationLabel;
-  if (elements.detailLocationValue)
-    elements.detailLocationValue.textContent = t.detailLocationValue;
-
-  if (elements.formNameLabel)
-    elements.formNameLabel.textContent = t.formNameLabel;
-  if (elements.formEmailLabel)
-    elements.formEmailLabel.textContent = t.formEmailLabel;
-  if (elements.formSubjectLabel)
-    elements.formSubjectLabel.textContent = t.formSubjectLabel;
-  if (elements.formMessageLabel)
-    elements.formMessageLabel.textContent = t.formMessageLabel;
-
-  if (elements.formNameInput)
-    elements.formNameInput.placeholder = t.formNamePlaceholder;
-  if (elements.formEmailInput)
-    elements.formEmailInput.placeholder = t.formEmailPlaceholder;
-  if (elements.formSubjectInput)
-    elements.formSubjectInput.placeholder = t.formSubjectPlaceholder;
-  if (elements.formMessageInput)
-    elements.formMessageInput.placeholder = t.formMessagePlaceholder;
-
-  if (elements.footerCopy) elements.footerCopy.textContent = t.footerCopy;
-  if (elements.footerImprint)
-    elements.footerImprint.textContent = t.footerImprint;
-  if (elements.footerPrivacy)
-    elements.footerPrivacy.textContent = t.footerPrivacy;
-  if (elements.footerTop) elements.footerTop.textContent = t.footerTop;
-
-  const expertiseClose = elements.modal?.querySelector(".modal-close");
-  const factsheetClose = elements.factsheetModal?.querySelector(".modal-close");
-  const consultantClose =
-    elements.consultantModal?.querySelector(".modal-close");
-  if (expertiseClose)
-    expertiseClose.setAttribute("aria-label", t.closeLabels.expertise);
-  if (factsheetClose)
-    factsheetClose.setAttribute("aria-label", t.closeLabels.factsheet);
-  if (consultantClose)
-    consultantClose.setAttribute("aria-label", t.closeLabels.consultant);
-
-  if (elements.consultantModal.classList.contains("open")) {
-    const openKey = elements.consultantModal.dataset.consultant;
-    if (openKey) openConsultantModal(openKey);
+    const successMsg = document.getElementById("form-success-msg");
+    if (successMsg) successMsg.textContent = t.formSuccessMsg;
   }
-
-  if (elements.sectionIntro && lang !== "de") elements.sectionIntro.textContent = t.sectionIntro;
-
-  if (elements.contactHeading)
-    elements.contactHeading.textContent = t.contactHeading;
-  if (elements.contactText) elements.contactText.textContent = t.contactText;
-  if (elements.contactSubmit)
-    elements.contactSubmit.textContent = t.contactSubmit;
-
-  const successMsg = document.getElementById("form-success-msg");
-  if (successMsg) successMsg.textContent = t.formSuccessMsg;
 }
 
 function installEventHandlers() {
