@@ -3,7 +3,7 @@
 .fc-sheet *,
 .fc-sheet *::before,
 .fc-sheet *::after {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -115,7 +115,7 @@
 }
 
 .fc-content table td:first-child {
-    width: 300px;
+    min-width: 150px;
     color: #b7238a;
     font-weight: 400;
     font-size: 16px;
@@ -134,6 +134,10 @@
 .fc-content p:last-child {
     margin-bottom: 0;
     width: 230px;
+}
+.fc-content p:last-of-type {
+    margin-bottom: 0;
+width: auto;
 }
 
 .fc-content p strong {
@@ -285,6 +289,9 @@
 
 .factsheet-modal-content .fc-banner {
     display: none;
+}
+.fact-img {
+  margin-bottom: 3rem; 
 }
 
 /* ============================================

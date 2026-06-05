@@ -60,6 +60,10 @@ body {
 
     color: var(--text);
 
+    hyphens: auto;
+
+    overflow-wrap: break-word;
+
     line-height: 1.6;
 
 }
@@ -1472,6 +1476,8 @@ ul {
 
     gap: 1.4rem;
 
+    font-size: 1rem;
+
 }
 
 
@@ -1566,7 +1572,7 @@ ul {
 
     margin: 0;
 
-    font-size: 1.26rem;
+    font-size: 1.26em;
 
     line-height: 1.2;
 
@@ -1994,7 +2000,7 @@ ul {
 
     margin: 0 0 0.35rem;
 
-    font-size: 1.3rem;
+    font-size: 1.3em;
 
 }
 
@@ -2613,11 +2619,12 @@ ul {
 
     /* Consultants */
     .consultants-grid {
+        font-size: 0.875rem;
         grid-template-columns: 1fr;
     }
 
     .consultant-card {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 1fr;
         padding: 1.2rem;
     }
 
@@ -2628,9 +2635,18 @@ ul {
     }
 
     .consultant-content h3 {
-        font-size: 1.1rem;
+        font-size: 1em;
+    }
+ .consultant-modal-columns {
+        grid-template-columns: 1fr;
+    }
+     .consultant-modal-bottom-row {
+        grid-template-columns: 1fr;
     }
 
+    .consultant-modal-header {
+        grid-template-columns: 1fr;
+    }
     /* Section intro text */
     .section-intro {
         font-size: 0.95rem;
@@ -2712,14 +2728,24 @@ ul {
     }
 
     .consultant-card {
-        grid-template-columns: 90px 1fr;
+        grid-template-columns: 1fr;
     }
+    
 
     .consultant-avatar {
         width: 90px;
         height: 90px;
     }
+ .consultant-modal-columns {
+        grid-template-columns: 1fr;
+    }
+     .consultant-modal-bottom-row {
+        grid-template-columns: 1fr;
+    }
 
+    .consultant-modal-header {
+        grid-template-columns: 1fr;
+    }
     /* Section intro text */
     .section-intro {
         font-size: 0.98rem;
@@ -2771,8 +2797,18 @@ ul {
 
     .consultants-grid {
         grid-template-columns: 1fr;
+        
+    }
+ .consultant-modal-columns {
+        grid-template-columns: 1fr;
+    }
+     .consultant-modal-bottom-row {
+        grid-template-columns: 1fr;
     }
 
+    .consultant-modal-header {
+        grid-template-columns: 1fr;
+    }
     .mobile-menu-toggle {
         display: flex;
     }
@@ -3030,7 +3066,7 @@ ul {
     }
 
     .consultant-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
     .contact-copy h2 {
@@ -3117,7 +3153,7 @@ ul {
 
     /* Consultant cards */
     .consultant-card {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 1fr;
         padding: 1.2rem;
     }
 
@@ -3128,7 +3164,7 @@ ul {
     }
 
     .consultant-content h3 {
-        font-size: 1.1rem;
+        font-size: 1.1em;
     }
 
     /* Section intro text */
