@@ -1,3 +1,8 @@
+body {
+   hyphens: none;
+   overflow-wrap: normal;
+}
+
 /* Scoped reset under .fc-sheet to avoid affecting other styles */
 .fc-sheet,
 .fc-sheet *,
@@ -116,9 +121,11 @@
 
 .fc-content table td:first-child {
     min-width: 150px;
+    max-width: 300px;
     color: #b7238a;
     font-weight: 400;
     font-size: 16px;
+    padding-right: 50px;
 }
 
 .fc-content table td:last-child {
@@ -291,10 +298,13 @@ width: auto;
     display: none;
 }
 .fact-img {
-    margin-top: 3rem; 
+   
   margin-bottom: 3rem; 
 }
-
+.fc-list-strong .fact-img {
+  margin-top: 3rem; 
+  margin-bottom: 3rem; 
+}
 /* ============================================
    FACT SHEETS - Responsive Adjustments
    ============================================ */
