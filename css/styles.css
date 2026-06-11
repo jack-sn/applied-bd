@@ -100,6 +100,8 @@ ul {
 
     padding-left: 1.1rem;
 
+    list-style-type: disc;
+
 }
 
 
@@ -494,13 +496,13 @@ ul {
 
 .card-label {
 
-    text-transform: uppercase;
+    text-transform: none;
 
     letter-spacing: 0.14em;
 
     font-size: 0.78rem;
 
-    font-weight: 700;
+    font-weight: 500;
 
     color: var(--primary);
 
@@ -1219,6 +1221,16 @@ ul {
     outline: 2px solid color-mix(in srgb, var(--primary) 45%, white 55%);
 
     outline-offset: 2px;
+
+}
+
+
+
+/* Ensure factsheet links are always left-aligned */
+
+.modal-projects .factsheet-link {
+
+    text-align: left;
 
 }
 

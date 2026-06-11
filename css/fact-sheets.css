@@ -102,7 +102,7 @@
 .fc-content table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
+    
 }
 
 .fc-content table tr {
@@ -170,7 +170,7 @@ width: auto;
 }
 
 .fc-content ul li::before {
-    content: "▪";
+    content: "•";
     color: #b7238a;
     position: absolute;
     left: 0;
@@ -219,7 +219,7 @@ width: auto;
 }
 
 .fc-list li::before {
-    content: "▪";
+    content: "•";
     color: #b7238a;
     position: absolute;
     left: 0;
@@ -291,6 +291,7 @@ width: auto;
     display: none;
 }
 .fact-img {
+    margin-top: 3rem; 
   margin-bottom: 3rem; 
 }
 
@@ -363,6 +364,10 @@ width: auto;
     .fc-footer-label {
         flex: none;
         margin-bottom: 8px;
+    }
+
+    .fc-content table td:first-child {
+        min-width: 100px;
     }
 
     .factsheet-modal-panel {

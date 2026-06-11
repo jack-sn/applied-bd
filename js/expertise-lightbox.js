@@ -133,7 +133,7 @@ const expertiseData = {
 
 const uiText = {
   en: {
-    heroEyebrow: "The Consulting Boutique: applied business development",
+    heroEyebrow: "the consulting boutique: applied business development",
 
     heroHeading:
       "Business meets HR:<br />We open new markets and guide your company safely through transformation — internationally experienced, pragmatic in implementation.",
