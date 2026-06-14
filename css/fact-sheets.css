@@ -300,6 +300,7 @@ width: auto;
 .fact-img {
    
   margin-bottom: 3rem; 
+  width:30vw;
 }
 .fc-list-strong .fact-img {
   margin-top: 3rem; 
